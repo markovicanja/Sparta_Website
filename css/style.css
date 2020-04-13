@@ -19,6 +19,12 @@ html, body {
 .row {
     margin: 0;
 }
+.container-fluid {
+    padding: 0;
+}
+.col-sm-12 {
+    padding: 0;
+}
 
 /* Headings */
 .heading {
@@ -85,5 +91,39 @@ footer {
 @media screen and (max-width: 400px) {  
     .copyright {
         margin-top: 2em;
+    }
+}
+
+/* Background section */
+.cropped {
+    position: relative;
+    text-align: center;
+}
+.cropped img {
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 42%, 0 75%);
+    filter: brightness(30%);
+}
+.heading {
+    color: white;
+    font-size: 6vw;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 3vw;
+    text-shadow: 2px 2px 3px black;
+}
+.heading-sm {
+    font-size: 2vw;
+}
+@media screen and (max-width: 400px) {  
+    .heading {
+        font-size: 20px;
+        line-height: 20px;
+        top: 40%;
+    }
+    .heading-sm {
+        font-size: 10px;
     }
 }
