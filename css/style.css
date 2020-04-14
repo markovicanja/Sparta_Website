@@ -30,26 +30,6 @@ html, body {
 .heading {
     text-align: center;
 }
-.heading-sm {
-    font-size: 15px;
-}
-.heading-md {
-    font-size: 20px;
-}
-.heading-lg {
-    font-size: 3.3vw;
-}
-.heading-xl {
-    font-size: 4.5vw;
-}
-@media screen and (max-width: 600px) {  
-    .heading-lg {
-        font-size: 20px;
-    }
-    .heading-xl {
-        font-size: 25px;
-    }
-}
 
 /* navbar */
 .navbar {
@@ -96,22 +76,14 @@ footer {
 
 /* Background section */
 .cropped {
-    position: relative;
     text-align: center;
+    margin-top: 10vw;
+    margin-bottom: 5vw;
 }
-.cropped img {
-    width: 100%;
-    clip-path: polygon(0 0, 100% 0, 100% 42%, 0 75%);
-    filter: brightness(30%);
-}
-.heading {
+.cropped .heading {
     color: white;
     font-size: 6vw;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    line-height: 3vw;
+    line-height: 4vw;
     text-shadow: 2px 2px 3px black;
 }
 .heading-sm {
@@ -121,9 +93,57 @@ footer {
     .heading {
         font-size: 20px;
         line-height: 20px;
-        top: 40%;
     }
     .heading-sm {
         font-size: 10px;
     }
+}
+
+/* Top rated workouts */
+.top-workouts {
+    color: white;
+    text-align: left;
+    line-height: 1.5em;
+}
+.top-workouts i {
+    font-size: 50px;
+    margin-bottom: .5em;
+}
+.top-workouts .gray-box {
+    background-color: rgb(31, 31, 31);
+    padding: 3em;
+}
+.top-workouts .blue-box {
+    background-color: rgb(0, 92, 197);
+    padding: 3em;
+}
+.top-workouts .lightblue-box {
+    background-color: rgb(60, 121, 190);
+    padding: 3em;
+}
+.top-workouts .heading {
+    font-size: large;
+}
+.top-workouts .text {
+    font-size: small;
+}
+.checked {
+    margin-top: 2em;
+    color: rgb(255, 208, 0);
+}
+
+/* About us */
+.text-section {
+    margin: 5vw 0;
+    color: black;
+    text-align: center;
+}
+.text-section .text {
+    font-size: medium;
+    line-height: 3vw;
+}
+.text-section .heading {
+    font-size: 5vw;
+    line-height: 3vw;
+    margin-bottom: 2vw;
 }
