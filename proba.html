@@ -23,14 +23,79 @@
     <link rel="icon" href="./images/logo/logo-icon.png">
 
     <script>
+        
         function prev() {
             document.getElementById('slider-container').scrollLeft -= 270;
         }
         function next() {
             document.getElementById('slider-container').scrollLeft += 270;
         }
+        $(".slide img").on("click" , function(){
+            $(this).toggleClass('zoomed');
+            $(".overlay").toggleClass('active');
+        })
+
     </script>
 
+    <style>
+        .gallery {
+            text-align: center;
+        }
+        .gallery h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+        .slider {
+            display: flex;
+            height: 350px;
+            overflow-x: scroll !important;
+            padding: 16px;
+            scroll-behavior: smooth;
+        }
+        .slider::-webkit-scrollbar {
+            height: 5px;
+            width: 150px;
+            display: none;
+        }
+        .slider::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .slider::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+        .slider::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        .slider img:hover {
+            transform: scale(1.05);
+            box-shadow: 10px 10px 10px rgba(0,0,0,0.15);
+        }
+        .slide img {
+            height: 100%;
+            width: 250px;
+            margin: 0 10px;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: .25s ease-in-out;
+        }
+        .control-prev-btn, .control-next-btn {
+            cursor: pointer;
+            color: rgb(122, 122, 122);
+            margin: 0 2em;
+        }
+        @media only screen and (max-width: 420px) {
+            .slider {
+                padding: 0;
+            }
+            .slide {
+                padding: 16px 10px;
+            }
+            .slide img {
+                margin: 0;
+            }
+        }
+ 
+    </style>
 </head>
 <body style="background-image: url('./images/bg.jpg'); background-repeat: no-repeat;">
     
