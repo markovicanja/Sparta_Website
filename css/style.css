@@ -146,5 +146,16 @@ footer {
     font-size: 5vw;
     line-height: 3vw;
     margin-bottom: 2vw;
-    font-weight: 700;
+}
+
+
+/* Dropdown menu */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-menu a {
+    padding: 12px 10px;
+}
+.dropdown-menu a:hover {
+    background-color: #ddd;
 }
