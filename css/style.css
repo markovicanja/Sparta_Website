@@ -140,10 +140,11 @@ footer {
 }
 .text-section .text {
     font-size: medium;
-    line-height: 3vw;
+    line-height: 2em;
 }
 .text-section .heading {
     font-size: 5vw;
     line-height: 3vw;
     margin-bottom: 2vw;
+    font-weight: 700;
 }
