@@ -124,6 +124,7 @@ footer {
 .breadcrumb-item a {
     color: rgba(255,255,255,.5);
 }
-.active a {
-    color: white !important;
+
+.a.dropdown-item{
+    color: black;;
 }
