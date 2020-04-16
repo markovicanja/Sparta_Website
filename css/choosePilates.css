@@ -39,4 +39,50 @@
     border-color: darkgrey;
 }
 
+.dropdown-menu1 {
+    display: block;
+}
+
+p {
+    margin-top: 40px;
+    font-size: 40px;
+    color: white;
+    border-style: dotted;
+    border-radius: 15px;
+    border-width: 4px;
+    border-color: rgb(60, 121, 190);
+}
+
+.linkWrapper {
+    width: 80%;
+    background-color: white;
+    border-radius: 15px;
+    border-color: black;
+    margin-bottom: 5px;
+}
+
+.dropdown-item:hover {
+    border-radius: 15px;
+}
+
+.dropdown-item.active {
+    border-radius: 15px;
+    background-color: rgb(60, 121, 190);
+}
+
+.dropdown-item:focus {
+    border-radius: 15px;
+    background-color: rgb(60, 121, 190);
+}
+
+.dropdown-menu {
+    border-radius: 15px;
+}
+
+.dropdown-menu:hover {
+    border-radius: 15px;
+}
+
+
+
 

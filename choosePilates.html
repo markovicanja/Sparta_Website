@@ -11,6 +11,8 @@
     <!-- FontAwesome CSS --> <!-- For icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     
+    <!-- sort.min.js --> <!-- For CounterUp -->
+    <script src="./js/sort.min.js"></script>
     <!-- JQuery --> <!-- For navbar -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -104,32 +106,30 @@
 
             <!-- Nav -->
             <div class="row" style="text-align:center;">
-                <div class="offset-sm-2 col-sm-2">
-                    <div class="dropdown">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Sortiraj po
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">Ime</a>
-                          <a class="dropdown-item" href="#">Trajanje</a>
-                          <a class="dropdown-item" href="#">Težina</a>
-                        </div>
+                <div class="col-sm-12 col-lg-1"></div>
+                <div class="col-sm-12 col-lg-2">
+                    <p>Sortiraj po</p>
+                    <div class="dropdown-menu1" id="meni">
+                        <div class="linkWrapper"><a class="dropdown-item active" href="#" onclick="sortName()">Ime</a></div>
+                        <div class="linkWrapper"><a class="dropdown-item" href="#" onclick="sortTime()">Trajanje</a></div>
+                        <div class="linkWrapper"><a class="dropdown-item" href="#" onclick="sortDif()">Težina</a></div>
                     </div>
                 </div>
+                <div class="col-sm-12 col-lg-1"></div>
                 <div class="col-sm-12 col-lg-4">
-                    <ul class="nav flex-column">
+                    <ul class="nav flex-column" id="flex-lista">
                         <li class="nav-item">
                           <a class="nav-link" href="classicPilates.html">Klasični pilates</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Stot pilates</a>
+                          <a class="nav-link" href="#">Reformer pilates</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Reformer pilates</a>
+                          <a class="nav-link" href="#">Stot pilates</a>
                         </li>
                       </ul>
                 </div>
-                <div class="col-sm-12 col-lg-3"></div>
+                <div class="col-sm-12 col-lg-4"></div>
             </div>
 
         </div>
