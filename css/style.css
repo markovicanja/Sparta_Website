@@ -92,13 +92,13 @@ footer {
 .heading-sm {
     font-size: 2vw;
 }
-@media screen and (max-width: 400px) {  
+@media screen and (max-width: 600px) {  
     .heading {
-        font-size: 20px;
+        font-size: 30px;
         line-height: 20px;
     }
     .heading-sm {
-        font-size: 10px;
+        font-size: 15px;
     }
 }
 
