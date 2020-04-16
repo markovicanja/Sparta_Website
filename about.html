@@ -13,6 +13,11 @@
     
     <!-- JQuery --> <!-- For navbar -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <!-- counterup.js --> <!-- For CounterUp -->
+    <script src="./js/counterup.min.js"></script>
+    <!-- waypoints.js --> <!-- For CounterUp -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
 
     <!--Bootstrap-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -108,8 +113,37 @@
             </div>
         </div>
 
-        <!--Nesto ovde dodati-->
-        <div style="height:300px"></div>
+        <!--CounterUp-->
+        <div class="container counter">
+            <div class="row">
+                <div class="col-sm-4">
+                    <i class="fas fa-users"></i>
+                    <br />
+                    <span class="num">2000</span>
+                    <span class="num-add">+</span>
+                    <br />
+                    ZADOVOLJNIH KORISNIKA
+                </div>
+                <div class="col-sm-4">
+                    <i class="fas fa-dumbbell"></i>
+                    <br />
+                    <span class="num">100</span>
+                    <br />
+                    SPRAVA I TEGOVA
+                </div>
+                <div class="col-sm-4">
+                    <i class="far fa-clipboard"></i>
+                    <br />
+                    <span class="num">6</span>
+                    <br />
+                    SERTIFIKOVANIH TRENERA
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            $(".num").counterUp({ delay: 10, time: 1000 });
+        </script>
 
         <!-- About Us -->
         <div class="container">
@@ -119,18 +153,19 @@
                         O SPARTI
                     </div>
                     <div class="text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Quibusdam natus iure iste, illum ex sunt omnis. Sequi culpa
-                        quisquam cum omnis ex, blanditiis reiciendis, vitae, eius
-                        assumenda corporis quia expedita.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Quibusdam natus iure iste, illum ex sunt omnis. Sequi culpa
-                        quisquam cum omnis ex, blanditiis reiciendis, vitae, eius
-                        assumenda corporis quia expedita.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Quibusdam natus iure iste, illum ex sunt omnis. Sequi culpa
-                        quisquam cum omnis ex, blanditiis reiciendis, vitae, eius
-                        assumenda corporis quia expedita.
+                        Sparta je jedinstvena teretana i fitness centar u Beogradu. 
+                        Kao jedna od većih teretana, prostire se na 1500 kvadratnih metara. 
+                        Radi se o vrhunski opremljenom prostoru u kojem možete raditi 
+                        kompletnu kondicijsku pripremu bilo da se radi o rekreativcu ili sportašu bilo kojeg sporta. 
+                        Neophodno je spomenuti da Sparta uvek ulaže u nove sprave za vežbanje 
+                        pa njeni članovi imaju pristup tuševima i velikim svlačionicama s ormarićima.
+                        <br/>
+                        Takođe vam se pruža mogućnost da sa svojom članskom karticom
+                        imate dozvoljen jedan ulazak na dan, pri čemu dobijate vremenski 
+                        neograničen boravak u teretani. 
+                        <br/>
+                        Sparta je specifična po tome što osim teretane nudi i niz grupnih 
+                        programa koji se mogu koristiti svi zajedno i kombinovati po želji korisnika.
                     </div>                    
                 </div>
             </div>
