@@ -3,44 +3,38 @@
     background-color:darkgrey;
     border-radius: 20px;
     font-size: 40px;
+    transition: all 1s ease;
 }
-
 .flex-column li:hover{
     transform: scale(1.1);
-    background-color: #00BFFF;
+    background-color: rgb(60, 121, 190);
 }
-
 .flex-column a.nav-link {
     margin: 0 auto;
     color: white;
     border-radius: 20px;
     font-weight: bold;
 }
-
 .flex-column a.nav-link.active {
-    background-color: #00BFFF;
+    background-color: rgb(60, 121, 190);
 }
-
 .question {
     color: white;
     font-size: 80px;
     font-weight: bold;
     margin-bottom: 15px;
 }
-
-.btn-success {
+.btn {
     color: #fff;
     background-color: darkgrey;
     margin: auto;
     border-color: darkgrey;
 }
-
-.btn-success:hover {
-    background-color: #00BFFF;
-    border-color: #00BFFF;
+.btn:hover {
+    background-color: rgb(60, 121, 190);
+    border-color: rgb(60, 121, 190);
 }
-
-.btn-success {
+.btn {
     background-color: darkgrey;
     border-color: darkgrey;
 }

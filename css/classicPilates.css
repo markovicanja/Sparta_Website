@@ -4,23 +4,20 @@
     background-color:darkgrey;
     border-radius: 20px;
     margin-bottom: 5px;
+    transition: all 1s ease;
 }
-
 .flex-column li:hover{
     transform: scale(1.05);
 }
-
 .flex-column a.nav-link {
     margin: 0 auto;
     color: white;
     border-radius: 20px;
     font-weight: bold;
 }
-
 .flex-column a.nav-link.active {
-    background-color: red;
+    background-color: rgb(60, 121, 190);
 }
-
 .exerciseInfo p {
     font-size: 130px;
     font-weight: bold;
@@ -28,7 +25,6 @@
     margin:auto;
     padding: 50px;
 }
-
 .flex-column li:hover{
     transform: scale(1.05);
 }

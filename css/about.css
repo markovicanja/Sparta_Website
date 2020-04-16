@@ -2,3 +2,19 @@ body {
     background-image: url(../images/bg-about.jpg);
     background-repeat: no-repeat; 
 }
+
+/* About us */
+.text-section {
+    margin: 5vw 0;
+    color: black;
+    text-align: center;
+}
+.text-section .text {
+    font-size: medium;
+    line-height: 2em;
+}
+.text-section .heading {
+    font-size: 5vw;
+    line-height: 3vw;
+    margin-bottom: 2vw;
+}

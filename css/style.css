@@ -102,55 +102,6 @@ footer {
     }
 }
 
-/* Top rated workouts */
-.top-workouts {
-    color: white;
-    text-align: left;
-    line-height: 1.5em;
-}
-.top-workouts i {
-    font-size: 50px;
-    margin-bottom: .5em;
-}
-.top-workouts .gray-box {
-    background-color: rgb(31, 31, 31);
-    padding: 3em;
-}
-.top-workouts .blue-box {
-    background-color: rgb(0, 92, 197);
-    padding: 3em;
-}
-.top-workouts .lightblue-box {
-    background-color: rgb(60, 121, 190);
-    padding: 3em;
-}
-.top-workouts .heading {
-    font-size: large;
-}
-.top-workouts .text {
-    font-size: small;
-}
-.checked {
-    margin-top: 2em;
-    color: rgb(255, 208, 0);
-}
-
-/* About us */
-.text-section {
-    margin: 5vw 0;
-    color: black;
-    text-align: center;
-}
-.text-section .text {
-    font-size: medium;
-    line-height: 2em;
-}
-.text-section .heading {
-    font-size: 5vw;
-    line-height: 3vw;
-    margin-bottom: 2vw;
-}
-
 /* Dropdown menu */
 .dropdown:hover .dropdown-menu {
     display: block;
@@ -162,60 +113,20 @@ footer {
     background-color: #ddd;
 }
 
-/* Gallery */
-.gallery {
-    text-align: center;
+/* Breadcrumbs */
+.breadcrumb {
+    background-color: rgb(27, 27, 27);
+    border-color: white;
+    border-bottom: 3px;
+    margin-top: 5px;
 }
-.gallery h3 {
-    font-size: 1.8rem;
-    font-weight: 800;
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    color: rgba(255,255,255,.5);
 }
-.slider {
-    display: flex;
-    height: 350px;
-    overflow-x: scroll !important;
-    padding: 16px;
-    scroll-behavior: smooth;
+.breadcrumb-item {
+    color: rgba(255,255,255,.5);
 }
-.slider::-webkit-scrollbar {
-    height: 5px;
-    width: 150px;
-    display: none;
-}
-.slider::-webkit-scrollbar-track {
-    background: transparent;
-}
-.slider::-webkit-scrollbar-thumb {
-    background: #888;
-}
-.slider::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-.slider img:hover {
-    transform: scale(1.05);
-    box-shadow: 10px 10px 10px rgba(0,0,0,0.15);
-}
-.slide img {
-    height: 100%;
-    width: 250px;
-    margin: 0 10px;
-    object-fit: cover;
-    border-radius: 15px;
-    transition: .25s ease-in-out;
-}
-.control-prev-btn, .control-next-btn {
-    cursor: pointer;
-    color: rgb(122, 122, 122);
-    margin: 0 2em;
-}
-@media only screen and (max-width: 420px) {
-    .slider {
-        padding: 0;
-    }
-    .slide {
-        padding: 16px 10px;
-    }
-    .slide img {
-        margin: 0;
-    }
+.breadcrumb-item.active {
+    color: white;
 }
