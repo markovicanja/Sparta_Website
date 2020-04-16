@@ -116,17 +116,14 @@ footer {
 /* Breadcrumbs */
 .breadcrumb {
     background-color: rgb(27, 27, 27);
-    border-color: white;
-    border-bottom: 3px;
     margin-top: 5px;
 }
 .breadcrumb-item + .breadcrumb-item::before {
     content: ">";
+}
+.breadcrumb-item a {
     color: rgba(255,255,255,.5);
 }
-.breadcrumb-item {
-    color: rgba(255,255,255,.5);
-}
-.breadcrumb-item.active {
-    color: white;
+.active a {
+    color: white !important;
 }
