@@ -46,6 +46,11 @@
     line-height: 3vw;
     margin-bottom: 2vw;
 }
+@media screen and (max-width: 600px) {  
+    .text-section .heading {
+        font-size: 35px;
+    }
+}
 
 /* Gallery */
 .gallery {
