@@ -30,3 +30,7 @@ body {
     margin: 0 auto;
     color: black;
 }
+
+.dropdown-item {
+    color: #212529 !important;
+}
