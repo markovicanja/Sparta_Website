@@ -1,0 +1,35 @@
+.flex-column li{
+    margin: 1px;
+    margin-left: 7px;
+    background-color:darkgrey;
+    border-radius: 20px;
+    margin-bottom: 5px;
+}
+
+.flex-column li:hover{
+    transform: scale(1.05);
+}
+
+.flex-column a.nav-link {
+    margin: 0 auto;
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.flex-column a.nav-link.active {
+    background-color: red;
+}
+
+.exerciseInfo p {
+    font-size: 130px;
+    font-weight: bold;
+    color: white;
+    margin:auto;
+    padding: 50px;
+}
+
+.flex-column li:hover{
+    transform: scale(1.05);
+}
+
