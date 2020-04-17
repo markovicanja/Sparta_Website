@@ -2,10 +2,6 @@ body {
     background-image: url(../images/bg3.jpg);
     background-repeat: no-repeat; 
 }
-.main1 {
-    overflow: auto;
-    padding-bottom: 100px;
-}
 .card {
     margin-top: 20px;
     margin-bottom: 40px;
