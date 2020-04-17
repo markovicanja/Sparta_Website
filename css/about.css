@@ -98,7 +98,7 @@ body {
     padding: 100px 0;
 }
 .trainer {
-    align-items: center;
+    text-align: center;
     position: relative; 
 }
 .trainer img {
@@ -110,21 +110,41 @@ body {
     display: flex;
 }
 .trainer .overlay {
-    height: 25vw;
+    height: 60px;
     width: 20vw;    
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     background-color: rgb(92, 138, 192);
+    color: white;
     position: absolute;
-    top: 0;
+    top: 70%;
     left: 0;
-    opacity: 0;
+    opacity: 0.5;
     transition: .5s ease;
 }
 .trainer:hover .overlay {
     opacity: 1;
+}
+.trainer .name {
+    font-size: 1.5vw;
+    line-height: 1.2vw;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+.trainer .job {
+    font-size: 1vw;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
 }
 @media screen and (max-width: 800px) { 
 	.trainer img {
@@ -132,7 +152,13 @@ body {
         width: 150px;  
     }
     .trainer .overlay {
-        height: 250px;
+        height: 50px;
         width: 150px; 
+    }
+    .trainer .name {
+        font-size: 11px;
+    }
+    .trainer .job {
+        font-size: 10px;
     }
 }
