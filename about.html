@@ -27,7 +27,29 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/about.css">
 
+    <!-- slick.js --> <!-- For Testimonials -->
+    <script src='http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js'></script>
+
     <link rel="icon" href="./images/logo/logo-icon.png">
+
+    <script>
+        $(document).ready(function () {
+            $('.testiSlide').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                responsive: [{
+                    breakpoint: 850,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                    }
+                }]
+            });
+        });
+    </script>
 
 </head>
 <body>
@@ -273,6 +295,78 @@
                     </div>
                 </div>
             </div>            
+        </div>
+
+        <!-- Testimonials -->
+        <div class="row testimonials mt-5 mb-5" style="text-align: center;">
+            <div class="offset-sm-3 col-sm-6">
+                <div class="heading-white text-center">
+                    Mišljenja naših korisnika
+                </div>
+                <div class="container mt-5">
+                    <div class="testiSlide">
+                        <div>
+                            <figure class="testimonial">
+                                <div class="image-slider">
+                                    <img src="./images/testimonial1.jpg" alt="">
+                                </div>
+                                <br />
+                                <i class="fas fa-quote-left"></i>
+                                <blockquote>
+                                    Treneri u Sparti pomogli su mi da postignem svoje ciljeve fitnesa
+                                    iznad svega čemu sam se mogala nadati. Zaista im je stalo da pomognu
+                                    kako početnicima, tako i naprednijim vežbačima. 
+                                    Atmosfera u Sparti je neverovatna, a ljudi su još bolji. 
+                                    Sve u svemu, Sparta je sjajno mesto za vežbanje. 
+                                </blockquote>
+                                <div class="peopl">
+                                    <h3>Milica Đurić</h3>
+                                </div>
+                            </figure>
+                        </div>
+
+                        <div>
+                            <figure class="testimonial">
+                                <div class="image-slider">
+                                    <img src="./images/testimonial2.jpg" alt="">
+                                </div>
+                                <br />
+                                <i class="fas fa-quote-left"></i>
+                                <blockquote>
+                                    Operma i sprave u Sparti su mi se najviše istakli. Odlično su održavani
+                                     i jako su kvalitetni. Postoji veliki izbor sprava za sve mišićne grupe, kao 
+                                    i veliki broj tegova, od malih do najvećih težina, tako da čak i kada je 
+                                    teretana najpunija, retko kad može da se desi da ne možete da radite neke
+                                    vežbe zato što ssu sve sprave zauzete.
+                                </blockquote>
+                                <div class="peopl">
+                                    <h3>Luka Janković</h3>
+                                </div>
+                            </figure>
+                        </div>
+
+                        <div>
+                            <figure class="testimonial">
+                                <div class="image-slider">
+                                    <img src="./images/testimonial3.jpg" alt="">
+                                </div>
+                                <br />
+                                <i class="fas fa-quote-left"></i>
+                                <blockquote>
+                                    Nemam nijednu zamerku što se tiče Sparte. Njihova usluga je vrhunska,
+                                    vode računa o svakom ćošku, higijena je na zavidnom nivou što je meni
+                                    od posebnog značaja. Oni zaista vode računa o svim svojim vežbačima, i 
+                                    maksimalno se trude da svima izađu u susret.
+                                </blockquote>
+                                <div class="peopl">
+                                    <h3>Una Zdravković</h3>
+                                </div>
+                            </figure>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
