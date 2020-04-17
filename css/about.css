@@ -279,3 +279,68 @@ body {
     content: '>';
     color:white
 }
+
+
+/* Awards */
+.awards {
+    background-color: white;
+    text-align: center;
+    padding: 30px;
+}
+.award img {
+    margin: auto;
+    width: 200px;
+}
+.award2 img {
+    margin: auto;
+    height: 100px;
+}
+.awards .heading-lg {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.awards .heading-sm {
+    font-size: 15px;
+    color: rgb(60, 121, 190);
+    font-weight: 700;
+}
+@media screen and (max-width: 800px) { 
+	.awards .heading-sm  {
+		font-size: 15px;
+    }
+    .awards .heading-lg {
+        font-size: 35px;
+    }
+}
+
+/* Contact and location */
+.map-contact {
+    background-color: rgba(92, 139, 192, 0.4);
+}
+.map {
+    padding: 0px;
+}
+.contact {
+    margin: auto;
+    padding: 20px;
+}
+.contact span {
+    color: white;
+}
+.contact i {
+    color:rgb(60, 121, 190);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.mapouter {
+    position: relative;
+    text-align: left;
+    height: 300px;
+    width: 100%;
+}
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 300px;
+    width: 100%;
+}

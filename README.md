@@ -6,3 +6,4 @@
  - https://colorlib.com/preview/#fitnessgym
  - https://colorlib.com/preview/#ironmuscle
  - https://colorlib.com/preview/#crossbody
+ - https://luxurylifestyleawards.com/winners/fitness-and-wellness
