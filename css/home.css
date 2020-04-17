@@ -13,11 +13,11 @@
     padding: 3em;
 }
 .top-workouts .blue-box {
-    background-color: rgb(60, 121, 190);    
+    background-color: rgb(92, 138, 192); 
     padding: 3em;
 }
 .top-workouts .lightblue-box {
-    background-color: rgb(92, 138, 192);
+    background-color: rgb(132, 164, 201);
     padding: 3em;
 }
 .top-workouts .heading {
@@ -42,8 +42,8 @@
     line-height: 2em;
 }
 .text-section .heading {
-    font-size: 5vw;
-    line-height: 3vw;
+    font-size: 4vw;
+    line-height: 4.5vw;
     margin-bottom: 2vw;
 }
 @media screen and (max-width: 600px) {  
