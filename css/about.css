@@ -7,6 +7,7 @@ body {
 /* About us */
 .about {
     background-color: white;
+    align-items: center;
 }
 .about img {
     position: relative;
@@ -18,6 +19,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
+    display: flex;
 }
 .text-section {
     margin-top: 5vw;
@@ -85,4 +87,34 @@ body {
 .team {
     background-image: url(../images/bg-fixed.jpg);
     background-attachment: fixed;
+    padding: 100px 0;
+}
+.trainer {
+    align-items: center;
+}
+.trainer img {
+    height: 25vw;
+    width: 20vw;    
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 10px auto;
+    display: flex;
+    filter: grayscale(100%);
+}
+.trainer .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    transition: .3s ease;
+    background-color: rgb(60, 121, 190);
+}
+@media screen and (max-width: 800px) { 
+	.trainer img {
+		height: 250px;
+        width: 150px;  
+	}
 }
