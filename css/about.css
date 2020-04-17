@@ -4,6 +4,14 @@ body {
     background-attachment: fixed;
 }
 
+.heading-white {
+    color: white;
+    font-size: 6vw;
+    line-height: 4vw;
+    text-shadow: 2px 2px 3px black;
+    margin-bottom: 1em;
+}
+
 /* About us */
 .about {
     background-color: white;
@@ -91,30 +99,40 @@ body {
 }
 .trainer {
     align-items: center;
+    position: relative; 
 }
 .trainer img {
     height: 25vw;
     width: 20vw;    
     object-fit: cover;
     border-radius: 5px;
-    margin: 10px auto;
+    margin: 20px 0;
     display: flex;
-    filter: grayscale(100%);
 }
 .trainer .overlay {
+    height: 25vw;
+    width: 20vw;    
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    background-color: rgb(92, 138, 192);
     position: absolute;
     top: 0;
-    bottom: 0;
     left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    transition: .3s ease;
-    background-color: rgb(60, 121, 190);
+    opacity: 0;
+    transition: .5s ease;
+}
+.trainer:hover .overlay {
+    opacity: 1;
 }
 @media screen and (max-width: 800px) { 
 	.trainer img {
 		height: 250px;
         width: 150px;  
-	}
+    }
+    .trainer .overlay {
+        height: 250px;
+        width: 150px; 
+    }
 }
