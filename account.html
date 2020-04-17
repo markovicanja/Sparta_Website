@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparta | Moj nalog</title>
+
+    <!--Font-->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    
+    <!-- FontAwesome CSS --> <!-- For icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    
+    <!-- JQuery --> <!-- For navbar -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--Bootstrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/account.css">
+
+    <link rel="icon" href="./images/logo/logo-icon.png">
+
+</head>
+<body>
+    
+<div class="wrapper">
+    <div class="main">
+            
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img src="./images/logo/white-logo.png" alt="Sparta" style="height:80px">
+            </a>
+        
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Početna</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Usluge
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="allExercises.html">Treninzi</a>
+                            <a class="dropdown-item" href="#">Nutricionista</a>
+                            <a class="dropdown-item" href="#">Masaže</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Zakazivanje treninga</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="account.html">Moj nalog</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">O nama</a>
+                    </li>
+                </ul>
+                <div class="my-2 my-lg-0 languages">
+                    <img src="./images/serbia.png" alt="srpski">
+                    <img src="./images/uk.png" alt="english">
+                </div>
+            </div>
+        </nav>
+
+        <!-- Breadcrumb -->
+        <div class="row">
+            <div class="col-sm-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">Početna</a>
+                        </li>
+                        <li class="breadcrumb-item active-breadcrumb">
+                            <a href="account.html">Moj nalog</a>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Background section -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 cropped">
+                    <div class="heading">
+                        Moj nalog
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Information -->
+        <div class="container-fluid information">
+            <div class="row">
+                <div class="offset-sm-1 col-sm-3 info-icons">
+                    <i class="fas fa-address-card"></i>
+                    <a href="account.html">
+                        Moje informacije
+                    </a>
+                    <br/>
+                    <i class="fas fa-sign-out-alt"></i>
+                    <a href="home.html">
+                        Odjavi se
+                    </a>
+                </div>  
+                <div class="col-sm-7 info-text">
+                    <img class="avatar" src="./images/male.jpg">
+                    <div class="name">Adrian Milaković</div>
+                    <div class="reserved">
+                        <table>
+                            <thead>
+                                <th>Trening</th>
+                                <th>Datum</th>
+                                <th>Vreme</th>
+                            </thead>
+                            <tr>
+                                <td>Core</td>
+                                <td>10.6.2020.</td>
+                                <td>17:00</td>
+                            </tr>
+                            <tr>
+                                <td>Cardio</td>
+                                <td>12.6.2020.</td>
+                                <td>18:00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="containter-fluid">
+    <div class="row">
+        <div class="col-sm-12 copyright">
+            &copy;Copyright 2020, Anja Marković i Vukašin Drašković,
+            Odsek za softversko inženjerstvo Elektrotehničkog fakulteta
+            Univerziteta u Beogradu
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

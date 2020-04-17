@@ -4,14 +4,6 @@ body {
     background-attachment: fixed;
 }
 
-.heading-white {
-    color: white;
-    font-size: 4vw;
-    line-height: 4vw;
-    text-shadow: 2px 2px 3px black;
-    margin-bottom: 1em;
-}
-
 /* About us */
 .about {
     background-color: white;

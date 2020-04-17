@@ -1,0 +1,56 @@
+body {
+    background-image: url(../images/bg-fixed.jpg);
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+}
+
+/* Information */
+.information {
+    background-color: white;
+    padding: 30px;
+}
+.information a {
+    color: black;
+}
+.information a:hover {
+    text-decoration: none;
+}
+.info-icons {
+    font-size: 20px;
+    border-right: .5px solid black;
+    padding: 20px;
+}
+.info-icons i {
+    color:rgb(92, 138, 192);
+    padding: 10px;
+}
+.avatar {
+    border-radius: 50%;
+}
+.information .name {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 20px;
+}
+.info-text {
+    padding-left: 5%;
+}
+.reserved table {
+    text-align: center;
+    border-collapse: collapse;
+    border-radius: 1em;
+    overflow: hidden;
+    background-color: rgba(159, 173, 189, 0.5);
+}
+.reserved thead {
+    background-color: rgb(92, 138, 192);
+    color: white;
+}
+.reserved td, .reserved th{
+    padding: 10px 20px;
+}
+@media screen and (max-width: 580px) { 
+	.info-icons {
+        border-right: 0px;
+    }
+}
