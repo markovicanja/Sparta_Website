@@ -111,6 +111,9 @@ footer {
 .dropdown-menu a:hover {
     background-color: #ddd;
 }
+.a.dropdown-item{
+    color: black;
+}
 
 /* Breadcrumbs */
 .breadcrumb {
@@ -123,7 +126,7 @@ footer {
 .breadcrumb-item a {
     color: rgba(255,255,255,.5);
 }
-
-.a.dropdown-item{
-    color: black;;
+.active-breadcrumb a {
+    color: white;
 }
+
