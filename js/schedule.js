@@ -19,15 +19,6 @@ jQuery(document).ready(function($){
         this.eventsGroup = this.eventsWrapper.find('.events-group');
         this.singleEvents = this.eventsGroup.find('.single-event');
         this.eventSlotHeight = this.eventsGroup.eq(0).children('.top-info').outerHeight();
-
-        this.modal = this.element.find('.event-modal');
-        this.modalHeader = this.modal.find('.header');
-        this.modalHeaderBg = this.modal.find('.header-bg');
-        this.modalBody = this.modal.find('.body'); 
-        this.modalBodyBg = this.modal.find('.body-bg'); 
-        this.modalMaxWidth = 800;
-        this.modalMaxHeight = 480;
-
         this.animating = false;
 
         this.initSchedule();
@@ -45,17 +36,11 @@ jQuery(document).ready(function($){
             this.eventSlotHeight = this.eventsGroup.eq(0).children('.top-info').outerHeight();
             this.element.addClass('js-full');
             this.placeEvents();
-            this.element.hasClass('modal-is-open') && this.checkEventModal();
         } else if(  mq == 'mobile' && this.element.hasClass('js-full') ) {
             //in this case you are on a mobile version (first load or resize from desktop)
             this.element.removeClass('js-full loading');
             this.eventsGroup.children('ul').add(this.singleEvents).removeAttr('style');
             this.eventsWrapper.children('.grid-line').remove();
-            this.element.hasClass('modal-is-open') && this.checkEventModal();
-        } else if( mq == 'desktop' && this.element.hasClass('modal-is-open')){
-            //on a mobile version with modal open - need to resize/move modal window
-            this.checkEventModal('desktop');
-            this.element.removeClass('loading');
         } else {
             this.element.removeClass('loading');
         }
@@ -111,14 +96,6 @@ jQuery(document).ready(function($){
         if( !windowResize ) {
             windowResize = true;
             (!window.requestAnimationFrame) ? setTimeout(checkResize) : window.requestAnimationFrame(checkResize);
-        }
-    });
-
-    $(window).keyup(function(event) {
-        if (event.keyCode == 27) {
-            objSchedulesPlan.forEach(function(element){
-                element.closeModal(element.eventsGroup.find('.selected-event'));
-            });
         }
     });
 
