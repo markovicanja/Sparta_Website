@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sparta - Treninzi Pilates</title>
+    <title>Sparta - Zakazivanje treninga</title>
 
     <!--Font-->
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
@@ -11,8 +11,8 @@
     <!-- FontAwesome CSS --> <!-- For icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     
-    <!-- sort.min.js -->
-    <script src="./js/sort.min.js"></script>
+    <!-- booking.min.js -->
+    <script src="./js/booking.min.js"></script>
     <!-- JQuery --> <!-- For navbar -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -22,8 +22,7 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/allExercises.css">
-    <link rel="stylesheet" href="css/choosePilates.css">
+    <link rel="stylesheet" href="css/booking.css">
 
     <link rel="icon" href="./images/logo/logo-icon.png">
 
@@ -49,7 +48,7 @@
                             <a class="nav-link" href="index.html">Početna</a>
                         </li>
 
-                        <li class="nav-item dropdown active">
+                        <li class="nav-item dropdown">
                             <a class="nav-link" href="#" id="navbarDropdown"
                                 role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Usluge
@@ -62,7 +61,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="booking.html">Zakazivanje treninga</a>
+                            <a class="nav-link active" href="booking.html">Zakazivanje treninga</a>
                         </li>
 
                         <li class="nav-item">
@@ -85,55 +84,63 @@
                 <div class="col-sm-12">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Usluge</a></li>
-                            <li class="breadcrumb-item"><a href="allExercises.html">Treninzi</a></li>
+                            <li class="breadcrumb-item"><a href="index.html">Početna</a></li>
                             <li class="breadcrumb-item active-breadcrumb">
-                                <a href="choosePilates.html">Pilates</a>
+                                <a href="booking.html">Zakazivanje treninga</a>
                             </li>
                         </ol>
                     </nav>
                 </div>
             </div>
 
-            <!-- Tekst -->
             <div class="row">
-                <div class="col-sm-12 col-lg-2"></div>
-                <div class="col-sm-12 col-lg-8">
-                    <div class="question">
-                        Koji trening Vas zanima?
-                    </div>
+                <div class="col-sm-12 col-lg-3">
+                  <div class="tekst">Filter</div>
+                  <ul class="list-group" id="listFilter">
+                    <li class="list-group-item active" onclick="filterAll()">Sve</li>
+                    <li class="list-group-item" onclick="filterYoga()">Yoga</li>
+                    <li class="list-group-item" onclick="filterPilates()">Pilates</li>
+                    <li class="list-group-item" onclick="filterCore()">Core</li>
+                    <li class="list-group-item" onclick="filterCardio()">Kardio</li>
+                  </ul>
                 </div>
-                <div class="col-sm-12 col-lg-2"></div>
-            </div>
-
-            <!-- Nav -->
-            <div class="row" style="text-align:center;">
-                <div class="col-sm-12 col-lg-1"></div>
-                <div class="col-sm-12 col-lg-2">
-                    <p>Sortiraj po</p>
-                    <div class="dropdown-menu1" id="meni">
-                        <div class="linkWrapper"><a class="dropdown-item active" href="#" onclick="sortName()">Ime</a></div>
-                        <div class="linkWrapper"><a class="dropdown-item" href="#" onclick="sortTime()">Trajanje</a></div>
-                        <div class="linkWrapper"><a class="dropdown-item" href="#" onclick="sortDif()">Težina</a></div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-lg-1"></div>
                 <div class="col-sm-12 col-lg-4">
-                    <ul class="nav flex-column" id="flex-lista">
-                        <li class="nav-item">
-                          <a class="nav-link" href="classicPilates.html">Klasični pilates</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Reformer pilates</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Stot pilates</a>
-                        </li>
+                    <div class="tekst">Trening</div>
+                    <ul class="list-group" id="listExercise">
+                        <li class="list-group-item active">Yoga 1</li>
+                        <li class="list-group-item">Yoga 2</li>
+                        <li class="list-group-item">Yoga 3</li>
+                        <li class="list-group-item">Klasični pilates</li>
+                        <li class="list-group-item">Reformer pilates</li>
+                        <li class="list-group-item">Stot pilates</li>
+                        <li class="list-group-item">Core 1</li>
+                        <li class="list-group-item">Core 2</li>
+                        <li class="list-group-item">Core 3</li>
+                        <li class="list-group-item">Kardio 1</li>
+                        <li class="list-group-item">Kardio 2</li>
+                        <li class="list-group-item">Kardio 3</li>
                       </ul>
                 </div>
-                <div class="col-sm-12 col-lg-4"></div>
+                <div class="col-sm-12 col-lg-5">
+                    <div class="tekst">Termin i broj mesta</div>
+                    <input type="hidden" id="hiddenDay">
+                    <div class="listWrapper">
+                        <ul class="list-group" id="listDay">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">Sreda 18h
+                                <span class="badge badge-secondary badge-pill"></span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">Petak 19h
+                                <span class="badge badge-secondary badge-pill">5</span>
+                                <button type="button" class="btn btn-secondary">Rezerviši</button>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">Nedelja 13h
+                                <span class="badge badge-secondary badge-pill">20</span>
+                                <button type="button" class="btn btn-secondary">Rezerviši</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-
         </div>
     </div>
 
@@ -147,7 +154,7 @@
                 Univerziteta u Beogradu
             </div>
         </div>
-    </footer>    
+    </footer>   
 
 </body>
 </html>
