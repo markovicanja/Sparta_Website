@@ -179,7 +179,7 @@ a {
 .cd-schedule .events .single-event {
     /* force them to stay on one line */
     -ms-flex-negative: 0;
-        flex-shrink: 0;
+    flex-shrink: 0;
     float: left;
     height: 150px;
     width: 70%;
@@ -291,26 +291,26 @@ a {
     background: rgb(132, 164, 201);
 }
 .cd-schedule .single-event[data-event="event-1"]:hover {
-    background: rgb(70, 104, 143); 
+    background: rgb(110, 134, 161); 
 }
 .cd-schedule .single-event[data-event="event-2"],
 .cd-schedule [data-event="event-2"] .header-bg {
     background: rgb(82, 101, 124);
 }
 .cd-schedule .single-event[data-event="event-2"]:hover {
-    background: rgb(99, 123, 151);
+    background: rgb(138, 158, 180);
 }
 .cd-schedule .single-event[data-event="event-3"],
 .cd-schedule [data-event="event-3"] .header-bg {
-    background: rgb(121, 89, 114);
+    background: rgb(146, 108, 138);
 }
 .cd-schedule .single-event[data-event="event-3"]:hover {
-    background: rgb(210, 156, 255);
+    background: rgb(150, 134, 146);
 }
 .cd-schedule .single-event[data-event="event-4"],
 .cd-schedule [data-event="event-4"] .header-bg {
     background: rgb(124, 109, 136);
 }
 .cd-schedule .single-event[data-event="event-4"]:hover {
-    background: rgb(90, 67, 109);
+    background: rgb(180, 158, 197);
 }
