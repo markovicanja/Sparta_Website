@@ -24,8 +24,24 @@
 
     <link rel="icon" href="./images/logo/logo-icon.png">
 
+    <script>
+        function init() {
+            var s = Math.random() < 0.5 ? "male" : "female";
+            if (s == "male") {
+                document.getElementById("avatar").src="./images/male.jpg";
+                document.getElementById("name").innerHTML="Adrian Milaković";
+                localStorage.setItem("user", "Adrian");
+            }
+            else {
+                document.getElementById("avatar").src="./images/female.jpg";
+                document.getElementById("name").innerHTML="Jelica Cincović";
+                localStorage.setItem("user", "Jelica");
+            }
+        }        
+    </script>
+
 </head>
-<body>
+<body onload="init()">
     
 <div class="wrapper">
     <div class="main">
@@ -119,8 +135,8 @@
                     </a>
                 </div>  
                 <div class="col-sm-7 info-text">
-                    <img class="avatar" src="./images/male.jpg">
-                    <div class="name">Adrian Milaković</div>
+                    <img id="avatar" class="avatar" src="./images/male.jpg">
+                    <div id="name" class="name">Adrian Milaković</div>
                     <div class="reserved">
                         <table>
                             <thead>
