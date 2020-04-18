@@ -11,8 +11,6 @@
     <!-- FontAwesome CSS --> <!-- For icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     
-    <!-- booking.min.js -->
-    <script src="./js/booking.min.js"></script>
     <!-- JQuery --> <!-- For navbar -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -23,6 +21,10 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/booking.css">
+
+    <!-- Custom JS -->
+    <script src="./js/booking.min.js"></script>
+    <script src="./js/schedule.js"></script>
 
     <link rel="icon" href="./images/logo/logo-icon.png">
 
@@ -93,6 +95,248 @@
                 </div>
             </div>
 
+            <!-- Schedule -->
+            <div class="cd-schedule loading">
+            <div class="timeline">
+                <ul>
+                    <li><span>09:00</span></li>
+                    <li><span>09:30</span></li>
+                    <li><span>10:00</span></li>
+                    <li><span>10:30</span></li>
+                    <li><span>11:00</span></li>
+                    <li><span>11:30</span></li>
+                    <li><span>12:00</span></li>
+                    <li><span>12:30</span></li>
+                    <li><span>13:00</span></li>
+                    <li><span>13:30</span></li>
+                    <li><span>14:00</span></li>
+                    <li><span>14:30</span></li>
+                    <li><span>15:00</span></li>
+                    <li><span>15:30</span></li>
+                    <li><span>16:00</span></li>
+                    <li><span>16:30</span></li>
+                    <li><span>17:00</span></li>
+                    <li><span>17:30</span></li>
+                    <li><span>18:00</span></li>
+                </ul>
+            </div> 
+            <div class="events">
+                <ul class="wrap">
+                    <li class="events-group">
+                        <div class="top-info"><span>Ponedeljak</span></div>
+                        <ul>
+                            <li class="single-event" data-start="09:00" data-end="10:00" data-content="event-abs-circuit" data-event="event-1">
+                                <a href="#0">
+                                    <em class="event-name">Jutarnja joga</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="10:00" data-end="11:00" data-content="event-abs-circuit" data-event="event-2">
+                                <a href="#0">
+                                    <em class="event-name">Klasični pilates</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="13:00" data-end="14:30" data-content="event-rowing-workout" data-event="event-1">
+                                <a href="#0">
+                                    <em class="event-name">Spartanac</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="15:00" data-end="16:00" data-content="event-rowing-workout" data-event="event-4">
+                                <a href="#0">
+                                    <em class="event-name">Crossfit</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="16:00" data-end="17:30" data-content="event-rowing-workout" data-event="event-2">
+                                <a href="#0">
+                                    <em class="event-name">Aerobni napad</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="12:00" data-end="13:00"  data-content="event-yoga-1" data-event="event-3">
+                                <a href="#0">
+                                    <em class="event-name">Core</em>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="events-group">
+                        <div class="top-info"><span>Utorak</span></div>
+                        <ul>
+                            <li class="single-event" data-start="09:00" data-end="10:00"  data-content="event-rowing-workout" data-event="event-2">
+                                <a href="#0">
+                                    <em class="event-name">Reformer pilates</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="11:00" data-end="12:30"  data-content="event-restorative-yoga" data-event="event-4">
+                                <a href="#0">
+                                    <em class="event-name">Aštanga joga</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="15:00" data-end="16:00" data-content="event-abs-circuit" data-event="event-1">
+                                <a href="#0">
+                                    <em class="event-name">Body sculpting</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="17:00" data-end="18:00"  data-content="event-yoga-1" data-event="event-3">
+                                <a href="#0">
+                                    <em class="event-name">Hatha joga</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="13:30" data-end="14:30"  data-content="event-yoga-1" data-event="event-3">
+                                <a href="#0">
+                                    <em class="event-name">Kardio Boks</em>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="events-group">
+                        <div class="top-info"><span>Sreda</span></div>
+                        <ul>
+                            <li class="single-event" data-start="11:00" data-end="12:00" data-content="event-restorative-yoga" data-event="event-4">
+                                <a href="#0">
+                                    <em class="event-name">Klasični pilates</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="09:00" data-end="10:00" data-content="event-restorative-yoga" data-event="event-4">
+                                <a href="#0">
+                                    <em class="event-name">Jutarnja joga</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="17:00" data-end="18:30" data-content="event-restorative-yoga" data-event="event-1">
+                                <a href="#0">
+                                    <em class="event-name">Aerobni napad</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="16:00" data-end="17:00" data-content="event-restorative-yoga" data-event="event-4">
+                                <a href="#0">
+                                    <em class="event-name">Zumba</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="15:00" data-end="16:00" data-content="event-yoga-1" data-event="event-3">
+                                <a href="#0">
+                                    <em class="event-name">Crossfit</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="13:00" data-end="14:30"  data-content="event-rowing-workout" data-event="event-2">
+                                <a href="#0">
+                                    <em class="event-name">Spartanac</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="12:00" data-end="13:00" data-content="event-yoga-1" data-event="event-3">
+                                <a href="#0">
+                                    <em class="event-name">Core</em>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="events-group">
+                        <div class="top-info"><span>Četvrtak</span></div>
+                        <ul>
+                            <li class="single-event" data-start="13:00" data-end="14:00" data-content="event-abs-circuit" data-event="event-1">
+                                <a href="#0">
+                                    <em class="event-name">Stot pilates</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="09:00" data-end="10:00" data-content="event-restorative-yoga" data-event="event-4">
+                                <a href="#0">
+                                    <em class="event-name">Reformer pilates</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="11:00" data-end="12:30" data-content="event-abs-circuit" data-event="event-1">
+                                <a href="#0">
+                                    <em class="event-name">Aštanga joga</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="17:00" data-end="18:00" data-content="event-abs-circuit" data-event="event-1">
+                                <a href="#0">
+                                    <em class="event-name">Kardio Boks</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="15:00" data-end="16:00"  data-content="event-rowing-workout" data-event="event-2">
+                                <a href="#0">
+                                    <em class="event-name">Body sculpting</em>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="events-group">
+                        <div class="top-info"><span>Petak</span></div>
+                        <ul>
+                            <li class="single-event" data-start="11:00" data-end="12:00"  data-content="event-rowing-workout" data-event="event-2">
+                                <a href="#0">
+                                    <em class="event-name">Klasični pilates</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="09:00" data-end="10:00"  data-content="event-rowing-workout" data-event="event-2">
+                                <a href="#0">
+                                    <em class="event-name">Jutarnja joga</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="17:00" data-end="18:00"  data-content="event-rowing-workout" data-event="event-3">
+                                <a href="#0">
+                                    <em class="event-name">Hatha joga</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="15:00" data-end="16:30"  data-content="event-rowing-workout" data-event="event-2">
+                                <a href="#0">
+                                    <em class="event-name">Aerobni napad</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="13:00" data-end="14:30" data-content="event-abs-circuit" data-event="event-1">
+                                <a href="#0">
+                                    <em class="event-name">Spartanac</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="12:00" data-end="13:00"  data-content="event-yoga-1" data-event="event-3">
+                                <a href="#0">
+                                    <em class="event-name">Core</em>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="events-group">
+                        <div class="top-info"><span>Subota</span></div>
+                        <ul>
+                            <li class="single-event" data-start="11:00" data-end="12:30" data-content="event-abs-circuit" data-event="event-1">
+                                <a href="#0">
+                                    <em class="event-name">Aštanga joga</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="17:00" data-end="18:00" data-content="event-abs-circuit" data-event="event-1">
+                                <a href="#0">
+                                    <em class="event-name">Kardio Boks</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="16:00" data-end="17:00" data-content="event-rowing-workout" data-event="event-2">
+                                <a href="#0">
+                                    <em class="event-name">Zumba</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="15:00" data-end="16:00"  data-content="event-yoga-1" data-event="event-3">
+                                <a href="#0">
+                                    <em class="event-name">Crossfit </em>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="events-group">
+                        <div class="top-info"><span>Nedelja</span></div>
+                        <ul>
+                            <li class="single-event" data-start="13:00" data-end="14:00" data-content="event-abs-circuit" data-event="event-1">
+                                <a href="#0">
+                                    <em class="event-name">Stot pilates</em>
+                                </a>
+                            </li>
+                            <li class="single-event" data-start="17:00" data-end="18:00" data-content="event-rowing-workout" data-event="event-2">
+                                <a href="#0">
+                                    <em class="event-name">Hatha joga</em>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul> 
+            </div>  
+            </div>    
+
+            <!-- Lists -->
             <div class="row">
                 <div class="col-sm-12 col-lg-3">
                   <div class="tekst">Filter</div>
