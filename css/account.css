@@ -49,8 +49,22 @@ body {
 .reserved td, .reserved th{
     padding: 10px 20px;
 }
+@media screen and (max-width: 750px) { 
+    .reserved td, .reserved th{
+        padding: 10px 10px;
+    }
+}
 @media screen and (max-width: 580px) { 
 	.info-icons {
         border-right: 0px;
+    }
+    .reserved table {
+        font-size: 10px;
+    }
+    .reserved .btn {
+        font-size: 10px;
+    }
+    .reserved td, .reserved th{
+        padding: 10px 5px;
     }
 }
