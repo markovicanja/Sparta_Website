@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sparta | Treninzi Kardio</title>
+    <title>Sparta | Treninzi sa Tegovima</title>
 
     <!--Font-->
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
@@ -28,29 +28,41 @@
 
     <style>
         body {
-            background-image: url(./images/bg-fixed.jpg);
+            background-image: url(./images/bg.jpg);
             background-repeat: no-repeat; 
             background-attachment: fixed;
         }
         .type1 {
-            background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/cardio1.jpg);
+            background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/weights1.jpg);
             background-size: cover;
         }
         .type1:hover {
-            background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./images/cardio1.jpg);
+            background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./images/weights1.jpg);
             background-size: cover;
         }
         .type2 {
-            background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/cardio2.jpg);
+            background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/weights2.jpg);
+            background-size: cover;
         }
         .type2:hover {
-            background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./images/cardio2.jpg);
+            background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./images/weights2.jpg);
+            background-size: cover;
         }
         .type3 {
-            background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/cardio3.jpg);
+            background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/weights3.jpg);
+            background-size: cover;
         }
         .type3:hover {
-            background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./images/cardio3.jpg);
+            background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./images/weights3.jpg);
+            background-size: cover;
+        }
+        .type4 {
+            background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/weights4.jpg);
+            background-size: cover;
+        }
+        .type4:hover {
+            background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./images/weights4.jpg);
+            background-size: cover;
         }
     </style>
 
@@ -115,7 +127,7 @@
                             <li class="breadcrumb-item"><a href="#">Usluge</a></li>
                             <li class="breadcrumb-item"><a href="allExercises.html">Treninzi</a></li>
                             <li class="breadcrumb-item active-breadcrumb">
-                                <a href="chooseCardio.html">Kardio</a>
+                                <a href="chooseWeights.html">Tegovi</a>
                             </li>
                         </ol>
                     </nav>
@@ -127,20 +139,20 @@
                 <div class="row">
                     <div class="col-sm-12 cropped">
                         <div class="heading">
-                            Kardio
+                            Treninzi sa tegovima
                             <br/><br/>
                             <div class="heading-sm">
-                                Kardio Boks | Aerobni napad | Zumba
+                                Crossfit | Spartanac | Body sculpting | Core
                             </div>                            
                         </div>   
                         <span class="sort-button">
-                            <button class="button" onclick="nameSort('kardio', 'aerobni', 'zumba')">Sortiraj po imenu</button>                 
+                            <button class="button" onclick="nameSort('crossfit', 'spartanac', 'body', 'core')">Sortiraj po imenu</button>                 
                         </span>  
                         <span class="sort-button">
-                            <button class="button" onclick="numSort(60, 90, 61)">Sortiraj po trajanju</button>                 
+                            <button class="button" onclick="numSort(60, 90, 61, 30)">Sortiraj po trajanju</button>                 
                         </span>  
                         <span class="sort-button">
-                            <button class="button" onclick="numSort(3,4,2)">Sortiraj po težini</button>                 
+                            <button class="button" onclick="numSort(4,5,3,2)">Sortiraj po težini</button>                 
                         </span>  
                     </div>
                 </div>
@@ -153,7 +165,7 @@
                     <div class="col-sm-12 type type1">
                         <a href="#">
                             <div class="text">
-                                <h1>Kardio Boks</h1>
+                                <h1>Crossfit</h1>
                                 <p>Pogledaj više</p>
                                 <i class="fas fa-chevron-down"></i>
                             </div>
@@ -163,7 +175,7 @@
                     <div class="col-sm-12 type type2">
                         <a href="#">
                             <div class="text">
-                                <h1>Aerobni napad</h1>
+                                <h1>Spartanac</h1>
                                 <p>Pogledaj više</p>
                                 <i class="fas fa-chevron-down"></i>
                             </div>
@@ -173,7 +185,17 @@
                     <div class="col-sm-12 type type3">
                         <a href="">
                             <div class="text">
-                                <h1>Zumba</h1>
+                                <h1>Body sculpting</h1>
+                                <p>Pogledaj više</p>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-sm-12 type type4">
+                        <a href="#">
+                            <div class="text">
+                                <h1>Core</h1>
                                 <p>Pogledaj više</p>
                                 <i class="fas fa-chevron-down"></i>
                             </div>
