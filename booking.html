@@ -29,7 +29,7 @@
     <link rel="icon" href="./images/logo/logo-icon.png">
 
 </head>
-<body>
+<body onload="filter1()">
     
     <div class="wrapper">
         <div class="main">
@@ -121,7 +121,7 @@
                 </ul>
             </div> 
             <div class="events">
-                <ul class="wrap">
+                <ul class="wrap" id="raspored">
                     <li class="events-group">
                         <div class="top-info"><span>Ponedeljak</span></div>
                         <ul>
@@ -215,16 +215,17 @@
                                     <em class="event-name">Crossfit</em>
                                 </a>
                             </li>
-                            <li class="single-event" data-start="13:00" data-end="14:30"  data-content="event-rowing-workout" data-event="event-2">
-                                <a href="#0">
-                                    <em class="event-name">Spartanac</em>
-                                </a>
-                            </li>
                             <li class="single-event" data-start="12:00" data-end="13:00" data-content="event-yoga-1" data-event="event-3">
                                 <a href="#0">
                                     <em class="event-name">Core</em>
                                 </a>
                             </li>
+                            <li class="single-event" data-start="13:00" data-end="14:30"  data-content="event-rowing-workout" data-event="event-2">
+                                <a href="#0">
+                                    <em class="event-name">Spartanac</em>
+                                </a>
+                            </li>
+                            
                         </ul>
                     </li>
                     <li class="events-group">
@@ -341,47 +342,36 @@
                 <div class="col-sm-12 col-lg-3">
                   <div class="tekst">Filter</div>
                   <ul class="list-group" id="listFilter">
-                    <li class="list-group-item active" onclick="filterAll()">Sve</li>
-                    <li class="list-group-item" onclick="filterYoga()">Yoga</li>
-                    <li class="list-group-item" onclick="filterPilates()">Pilates</li>
-                    <li class="list-group-item" onclick="filterCore()">Core</li>
-                    <li class="list-group-item" onclick="filterCardio()">Kardio</li>
+                    <li class="list-group-item active" onclick="filter(this.id)" id="AllFilter">Sve</li>
+                    <li class="list-group-item" onclick="filter(this.id)" id="YogaFilter">Yoga</li>
+                    <li class="list-group-item" onclick="filter(this.id)" id="PilatesFilter">Pilates</li>
+                    <li class="list-group-item" onclick="filter(this.id)" id="CoreFilter">Core</li>
+                    <li class="list-group-item" onclick="filter(this.id)" id="CardioFilter">Kardio</li>
                   </ul>
                 </div>
                 <div class="col-sm-12 col-lg-4">
                     <div class="tekst">Trening</div>
+                    <input type="hidden" id="hiddenFilter" value="Sve">
                     <ul class="list-group" id="listExercise">
-                        <li class="list-group-item active">Yoga 1</li>
-                        <li class="list-group-item">Yoga 2</li>
-                        <li class="list-group-item">Yoga 3</li>
-                        <li class="list-group-item">Klasični pilates</li>
-                        <li class="list-group-item">Reformer pilates</li>
-                        <li class="list-group-item">Stot pilates</li>
-                        <li class="list-group-item">Core 1</li>
-                        <li class="list-group-item">Core 2</li>
-                        <li class="list-group-item">Core 3</li>
-                        <li class="list-group-item">Kardio 1</li>
-                        <li class="list-group-item">Kardio 2</li>
-                        <li class="list-group-item">Kardio 3</li>
+                        <li class="list-group-item active" id="1" onclick="clickExercise(this.id)">Jutarnja joga</li>
+                        <li class="list-group-item" id="2" onclick="clickExercise(this.id)">Aštanga joga</li>
+                        <li class="list-group-item" id="3" onclick="clickExercise(this.id)">Hatha joga</li>
+                        <li class="list-group-item" id="4" onclick="clickExercise(this.id)">Klasični pilates</li>
+                        <li class="list-group-item" id="5" onclick="clickExercise(this.id)">Reformer pilates</li>
+                        <li class="list-group-item" id="6" onclick="clickExercise(this.id)">Stot pilates</li>
+                        <li class="list-group-item" id="7" onclick="clickExercise(this.id)">Crossfit</li>
+                        <li class="list-group-item" id="8" onclick="clickExercise(this.id)">Spartanac</li>
+                        <li class="list-group-item" id="9" onclick="clickExercise(this.id)">Body sculpting</li>
+                        <li class="list-group-item" id="10" onclick="clickExercise(this.id)">Core</li>
+                        <li class="list-group-item" id="11" onclick="clickExercise(this.id)">Kardio Boks</li>
+                        <li class="list-group-item" id="12" onclick="clickExercise(this.id)">Aerobni napad</li>
+                        <li class="list-group-item" id="13" onclick="clickExercise(this.id)">Zumba</li>
                       </ul>
                 </div>
                 <div class="col-sm-12 col-lg-5">
                     <div class="tekst">Termin i broj mesta</div>
-                    <input type="hidden" id="hiddenDay">
                     <div class="listWrapper">
-                        <ul class="list-group" id="listDay">
-                            <li class="list-group-item d-flex justify-content-between align-items-center">Sreda 18h
-                                <span class="badge badge-secondary badge-pill"></span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">Petak 19h
-                                <span class="badge badge-secondary badge-pill">5</span>
-                                <button type="button" class="btn btn-secondary">Rezerviši</button>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">Nedelja 13h
-                                <span class="badge badge-secondary badge-pill">20</span>
-                                <button type="button" class="btn btn-secondary">Rezerviši</button>
-                            </li>
-                        </ul>
+                        <ul class="list-group" id="listDay"></ul>
                     </div>
                 </div>
             </div>

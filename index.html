@@ -25,12 +25,30 @@
     <link rel="icon" href="./images/logo/logo-icon.png">
 
     <script>
+        
+        function initIndex() {
+
+            localStorage.clear();
+
+            var s = Math.random() < 0.5 ? "male" : "female";
+            if (s == "male") {
+                localStorage.setItem("user", "Adrian");
+                localStorage.setItem("cntA", "0");
+            }
+            else {
+                localStorage.setItem("user", "Jelica");
+                localStorage.setItem("cntJ", "0");
+            }
+        }   
+
         function prev() {
             document.getElementById('slider-container').scrollLeft -= 270;
         }
+
         function next() {
             document.getElementById('slider-container').scrollLeft += 270;
         }
+
     </script>
 
 </head>

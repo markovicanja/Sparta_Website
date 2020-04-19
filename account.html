@@ -22,21 +22,47 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/account.css">
 
+    <!-- Custom JS -->
+    <script src="./js/booking.min.js"></script>
+
     <link rel="icon" href="./images/logo/logo-icon.png">
 
     <script>
         function init() {
             var s = Math.random() < 0.5 ? "male" : "female";
+            count=0;
+            char='';
             if (s == "male") {
                 document.getElementById("avatar").src="./images/male.jpg";
                 document.getElementById("name").innerHTML="Adrian Milaković";
                 localStorage.setItem("user", "Adrian");
+                count=localStorage.getItem('cntA');
+                char='A';
             }
             else {
                 document.getElementById("avatar").src="./images/female.jpg";
                 document.getElementById("name").innerHTML="Jelica Cincović";
                 localStorage.setItem("user", "Jelica");
+                count=localStorage.getItem('cntJ');
+                char='J';
             }
+
+                document.getElementById('res').innerHTML="<table><thead><th>Trening</th><th>Datum</th><th>Vreme</th><th>Otkazivanje</th></thead>";
+
+                for (i=0; i<count; i++) {
+                    index='num'+char+i;
+                    item=localStorage.getItem(index);
+
+                    datum=item.slice(0,9);
+                    vreme=item.slice(10,16);
+                    ime=item.substring(17);
+                    alert(datum+'\n'+vreme+'\n'+ ime);
+
+                    document.getElementById('res').innerHTML+='<tr><td>'+ime+'</td><td>'+datum+'</td><td>'+vreme+'</td>'+
+                                '<td><input type="button" class="btn" value="Otkaži"></td></tr>'
+                }
+
+                document.getElementById('res').innerHTML+="</table>";
         }        
     </script>
 
@@ -137,7 +163,7 @@
                 <div class="col-sm-7 info-text">
                     <img id="avatar" class="avatar" src="./images/male.jpg">
                     <div id="name" class="name">Adrian Milaković</div>
-                    <div class="reserved">
+                    <div class="reserved" id="res">
                         <table>
                             <thead>
                                 <th>Trening</th>
