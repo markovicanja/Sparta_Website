@@ -53,7 +53,12 @@ a:hover {
 span.badge {
     background-color: rgb(60, 121, 190);
 }
-
+.dropdown-menu {
+    font-size: medium;
+}
+nav a:hover {
+    text-decoration: none !important;
+}
 
 /* Schedule */
 ol, ul {
@@ -66,19 +71,17 @@ table {
 html {
     font-size: 62.5%;
 }
-body {
+body {    
     font-size: 1.6rem;
-    font-family: "Source Sans Pro", sans-serif;
     color: #222222;
     background-color: white;
 }
 a {
     color: #A2B9B2;
-    text-decoration: none;
 }
 .cd-schedule {
     position: relative;
-    margin: 2em 0;
+    margin: 2em 0;    
 }
 .cd-schedule::before {
     /* never visible - this is used in js to check the current MQ */
