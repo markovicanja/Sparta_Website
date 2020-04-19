@@ -21,6 +21,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Custom JS -->
+    <script src="./js/sort.js"></script>
+
     <link rel="icon" href="./images/logo/logo-icon.png">
 
     <style>
@@ -129,13 +132,13 @@
                             </div>                            
                         </div>   
                         <span class="sort-button">
-                            <button class="button">Sortiraj po imenu</button>                 
+                            <button class="button" onclick="nameSort('stot', 'reformer', 'klasicni')">Sortiraj po imenu</button>                 
                         </span>  
                         <span class="sort-button">
-                            <button class="button">Sortiraj po trajanju</button>                 
+                            <button class="button" onclick="numSort(60, 60, 60)">Sortiraj po trajanju</button>                 
                         </span>  
                         <span class="sort-button">
-                            <button class="button">Sortiraj po težini</button>                 
+                            <button class="button" onclick="numSort(2,3,1)">Sortiraj po težini</button>                 
                         </span>  
                     </div>
                 </div>
@@ -144,7 +147,7 @@
             <!-- Workout types section -->
             <div class="container-fluid">
                 <div class="row workout-type">
-                    
+
                     <div class="col-sm-12 type type1">
                         <a href="#">
                             <div class="text">
