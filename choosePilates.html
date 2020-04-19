@@ -11,8 +11,6 @@
     <!-- FontAwesome CSS --> <!-- For icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     
-    <!-- sort.min.js -->
-    <script src="./js/sort.min.js"></script>
     <!-- JQuery --> <!-- For navbar -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -22,10 +20,34 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/allExercises.css">
-    <link rel="stylesheet" href="css/choosePilates.css">
 
     <link rel="icon" href="./images/logo/logo-icon.png">
+
+    <style>
+        body {
+            background-image: url(./images/pilates.jpg);
+            background-repeat: no-repeat; 
+            background-attachment: fixed;
+        }
+        .type1 {
+            background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/pilates1.jpg);
+        }
+        .type1:hover {
+            background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./images/pilates1.jpg);
+        }
+        .type2 {
+            background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/pilates2.jpg);
+        }
+        .type2:hover {
+            background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./images/pilates2.jpg);
+        }
+        .type3 {
+            background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/pilates3.jpg);
+        }
+        .type3:hover {
+            background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./images/pilates3.jpg);
+        }
+    </style>
 
 </head>
 <body>
@@ -95,44 +117,67 @@
                 </div>
             </div>
 
-            <!-- Tekst -->
-            <div class="row">
-                <div class="col-sm-12 col-lg-2"></div>
-                <div class="col-sm-12 col-lg-8">
-                    <div class="question">
-                        Koji trening Vas zanima?
+            <!-- Background section -->
+            <div class="container-fluid mt-5">
+                <div class="row">
+                    <div class="col-sm-12 cropped">
+                        <div class="heading">
+                            Pilates
+                            <br/><br/>
+                            <div class="heading-sm">
+                                Stot | Reformer | Klasični
+                            </div>                            
+                        </div>   
+                        <span class="sort-button">
+                            <button class="button">Sortiraj po imenu</button>                 
+                        </span>  
+                        <span class="sort-button">
+                            <button class="button">Sortiraj po trajanju</button>                 
+                        </span>  
+                        <span class="sort-button">
+                            <button class="button">Sortiraj po težini</button>                 
+                        </span>  
                     </div>
                 </div>
-                <div class="col-sm-12 col-lg-2"></div>
             </div>
 
-            <!-- Nav -->
-            <div class="row" style="text-align:center;">
-                <div class="col-sm-12 col-lg-1"></div>
-                <div class="col-sm-12 col-lg-2">
-                    <p>Sortiraj po</p>
-                    <div class="dropdown-menu1" id="meni">
-                        <div class="linkWrapper"><a class="dropdown-item active" href="#" onclick="sortName()">Ime</a></div>
-                        <div class="linkWrapper"><a class="dropdown-item" href="#" onclick="sortTime()">Trajanje</a></div>
-                        <div class="linkWrapper"><a class="dropdown-item" href="#" onclick="sortDif()">Težina</a></div>
+            <!-- Workout types section -->
+            <div class="container-fluid">
+                <div class="row workout-type">
+                    
+                    <div class="col-sm-12 type type1">
+                        <a href="#">
+                            <div class="text">
+                                <h1>Stot pilates</h1>
+                                <p>Pogledaj više</p>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </a>
+                    </div>                    
+                    
+                    <div class="col-sm-12 type type2">
+                        <a href="#">
+                            <div class="text">
+                                <h1>Reformer pilates</h1>
+                                <p>Pogledaj više</p>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </a>
                     </div>
+                    
+                    <div class="col-sm-12 type type3">
+                        <a href="classicPilates.html">
+                            <div class="text">
+                                <h1>Klasični pilates</h1>
+                                <p>Pogledaj više</p>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </a>
+                    </div>
+
                 </div>
-                <div class="col-sm-12 col-lg-1"></div>
-                <div class="col-sm-12 col-lg-4">
-                    <ul class="nav flex-column" id="flex-lista">
-                        <li class="nav-item">
-                          <a class="nav-link" href="classicPilates.html">Klasični pilates</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Reformer pilates</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Stot pilates</a>
-                        </li>
-                      </ul>
-                </div>
-                <div class="col-sm-12 col-lg-4"></div>
             </div>
+            
 
         </div>
     </div>
