@@ -137,3 +137,35 @@
 .comment-section .fas, .comment-section .far {
     color: rgb(132, 164, 201);
 }
+
+/* Stars */
+.rating-group {
+    display: inline-flex;
+}
+.rating__icon {
+    pointer-events: none;
+}
+.rating__input {
+    position: absolute !important;
+    left: -9999px !important;
+}
+.rating__input--none {
+    display: none
+}
+.rating__label {
+    cursor: pointer;
+    padding: 0 0.1em;
+    font-size: 2rem;
+}
+.rating__icon--star {
+    color: rgb(132, 164, 201);
+}
+.rating__input:checked ~ .rating__label .rating__icon--star {
+    color: rgba(132, 164, 201, 0.2);
+}
+.rating-group:hover .rating__label .rating__icon--star {
+    color: rgb(132, 164, 201);
+}
+.rating__input:hover ~ .rating__label .rating__icon--star {
+    color: rgba(132, 164, 201, 0.2);
+}
