@@ -110,6 +110,7 @@
     width: 100%;
     height: 20vh;
     margin: 20px 0px;
+    padding: 10px;
 }
 .comment-section textarea:focus {
     outline: none;
