@@ -23,6 +23,7 @@
     margin: 15px 20px;
     cursor: pointer;
     transition: 0.3s;
+    box-shadow: .5em .5em 1em rgba(0, 0, 0, 0.5);
 }
 .gallery img:hover {
     opacity: 0.7;
