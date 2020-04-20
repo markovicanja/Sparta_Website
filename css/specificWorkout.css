@@ -28,8 +28,8 @@
     opacity: 0.7;
 }
 
-/* Modal */
-.modal {
+/* Image Modal */
+.image-modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -42,13 +42,13 @@
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.8);
 }
-.modal-content {
+.image-modal-content {
     margin: auto;
     display: block;
     width: 80%;
     max-width: 700px;
 }
-.modal-content, #caption {  
+.image-modal-content, #caption {  
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
@@ -82,4 +82,14 @@
     .modal-content {
         width: 100%;
     }
+}
+
+/* Video Modal */
+.modal-dialog {
+    max-width: 800px;
+    margin: 30px auto;
+}
+.modal-body {
+    position:relative;
+    padding:0px;
 }

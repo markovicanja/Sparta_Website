@@ -27,12 +27,6 @@
 
     <link rel="icon" href="./images/logo/logo-icon.png">
 
-    <script>
-
-        
-        
-    </script>
-
     <style>
         body {
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/yoga1.jpg);
@@ -184,15 +178,42 @@
                         <img id="img7" src="./images/morning_yoga7.jpg" onclick="openModal('img7')">
                         <img id="img8" src="./images/morning_yoga8.jpg" onclick="openModal('img8')">
                     </div>
-
+                    <div class="col-sm-12 gallery">
+                        <span class="white-button">
+                            <button class="button video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/T6IepoaCnSw?start=10" data-target="#myModal">Pogledaj video</button>                 
+                        </span>
+                        <span class="white-button">
+                            <button class="button video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/juMyePRSnJU?start=30" data-target="#myModal">Pogledaj video</button>                 
+                        </span>
+                        <span class="white-button">
+                            <button class="button video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/KOpP0l-VN7g?start=20" data-target="#myModal">Pogledaj video</button>                 
+                        </span>
+                        <span class="white-button">
+                            <button class="button video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/oX6I6vs1EFs?start=30" data-target="#myModal">Pogledaj video</button>                 
+                        </span>
+                    </div>
                 </div>
             </div>
 
-            <!-- The Modal -->
-            <div id="myModal" class="modal">
+            <!-- Image Modal -->
+            <div id="image-modal" class="image-modal">
                 <span class="close" onclick="closeModal()">&times;</span>
-                <img class="modal-content" id="img">
+                <img class="image-modal-content" id="img">
             </div>
+
+            <!-- Video Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">            
+                        <div class="modal-body">        
+                            <!-- 16:9 aspect ratio -->
+                            <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   
 
         </div>
     </div>
