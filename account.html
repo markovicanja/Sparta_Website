@@ -28,41 +28,81 @@
     <link rel="icon" href="./images/logo/logo-icon.png">
 
     <script>
+        initialHTML='<table><thead></thead><tr><td colspan="4" align="center">Nemate zakazanih termina</td></tr></table>';
         function init() {
-            var s = Math.random() < 0.5 ? "male" : "female";
+
+            user=sessionStorage.getItem("user");
             count=0;
             char='';
-            if (s == "male") {
+
+            if (user=="Adrian") {
                 document.getElementById("avatar").src="./images/male.jpg";
                 document.getElementById("name").innerHTML="Adrian Milaković";
-                localStorage.setItem("user", "Adrian");
-                count=localStorage.getItem('cntA');
+                count=sessionStorage.getItem('cntA');
                 char='A';
             }
             else {
                 document.getElementById("avatar").src="./images/female.jpg";
                 document.getElementById("name").innerHTML="Jelica Cincović";
-                localStorage.setItem("user", "Jelica");
-                count=localStorage.getItem('cntJ');
+                count=sessionStorage.getItem('cntJ');
                 char='J';
             }
+            
 
-                document.getElementById('res').innerHTML="<table><thead><th>Trening</th><th>Datum</th><th>Vreme</th><th>Otkazivanje</th></thead>";
+            full='';
+            rowID=100;
+            removed=sessionStorage.getItem("removed");
+            removedNum=sessionStorage.getItem("removedNum");
+            full="<table><thead><th>Trening</th><th>Datum</th><th>Vreme</th><th>Otkazivanje</th></thead>";
+
+            danas=new Date();
+            zero='';
+            if (danas.getMonth()<9) zero='0';
+            danasDatum=danas.toString().slice(8,10)+'.'+zero+(danas.getMonth()+1)+'.'+(danas.getYear()+1900);
+            danDanas=danasDatum.slice(0,2);
+            mesecDanas=danasDatum.slice(3,5);
+            godinaDanas=danasDatum.slice(6,10);
+            satDanas=danas.getHours();
+            minutDanas=danas.getMinutes();
+            // alert(danDanas+ ' ' + mesecDanas + ' ' + godinaDanas + ' ' + satDanas + ' ' + minutDanas);
+
+            if (count==removedNum) {
+                document.getElementById('res').innerHTML=initialHTML;
+                return;
+            }
 
                 for (i=0; i<count; i++) {
                     index='num'+char+i;
-                    item=localStorage.getItem(index);
+                    item=sessionStorage.getItem(index);
+                    
+                    datum=item.slice(0,10);
+                    vreme=item.slice(11,16);
+                    ime=item.substring(16);
 
-                    datum=item.slice(0,9);
-                    vreme=item.slice(10,16);
-                    ime=item.substring(17);
-                    alert(datum+'\n'+vreme+'\n'+ ime);
+                    dan=datum.slice(0,2);
+                    mesec=datum.slice(3,5);
+                    godina=datum.slice(6,10);
+                    sat=parseInt(vreme.slice(0,2));
+                    minut=parseInt(vreme.slice(3,5));
+                    // alert(dan+ ' ' + mesec + ' ' + godina + ' ' + sat + ' ' + minut);
 
-                    document.getElementById('res').innerHTML+='<tr><td>'+ime+'</td><td>'+datum+'</td><td>'+vreme+'</td>'+
-                                '<td><input type="button" class="btn" value="Otkaži"></td></tr>'
+                    moze=true;
+                    if (danDanas==dan && mesecDanas==mesec && godinaDanas==godina && satDanas==sat && (minut-minutDanas<30)) moze=false;
+
+                    rowID++;
+                    currRow=new RegExp(rowID);
+                    removed=sessionStorage.getItem("removed");
+                    if (currRow.exec(removed)==null) {
+                        full+='<tr id="'+rowID+'"><td>'+ime+'</td><td>'+datum+'</td><td>'+vreme+'</td>';
+                        if (moze) {
+                            full+='<td><input type="button" class="btn" value="Otkaži" onclick="cancelPlace('+rowID+')"></td></tr>';
+                        }        
+                    }
                 }
 
-                document.getElementById('res').innerHTML+="</table>";
+                full+="</table>";
+
+                document.getElementById('res').innerHTML=full;
         }        
     </script>
 
@@ -156,7 +196,7 @@
                     </a>
                     <br/>
                     <i class="fas fa-sign-out-alt"></i>
-                    <a href="home.html">
+                    <a href="index.html" onclick="logOut()">
                         Odjavi se
                     </a>
                 </div>  
@@ -172,16 +212,7 @@
                                 <th>Otkazivanje</th>
                             </thead>
                             <tr>
-                                <td>Core</td>
-                                <td>10.6.2020.</td>
-                                <td>17:00</td>
-                                <td><input type="button" class="btn" value="Otkaži"></td>
-                            </tr>
-                            <tr>
-                                <td>Cardio</td>
-                                <td>12.6.2020.</td>
-                                <td>18:00</td>
-                                <td><input type="button" class="btn" value="Otkaži"></td>
+                                <td colspan="4" align="center">Nemate zakazanih termina</td>
                             </tr>
                         </table>
                     </div>

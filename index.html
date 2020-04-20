@@ -28,16 +28,23 @@
         
         function initIndex() {
 
-            localStorage.clear();
+            cnt=sessionStorage.getItem("cnt");
+            if (cnt==null) {
+                cnt=1;
+                sessionStorage.setItem("cnt", cnt);
+                sessionStorage.setItem("cntA", "0");
+                sessionStorage.setItem("cntJ", "0");
+                sessionStorage.setItem("rowID", "100");
+                sessionStorage.setItem("removed", "");
+                sessionStorage.setItem("removedNum", "0");
 
-            var s = Math.random() < 0.5 ? "male" : "female";
-            if (s == "male") {
-                localStorage.setItem("user", "Adrian");
-                localStorage.setItem("cntA", "0");
-            }
-            else {
-                localStorage.setItem("user", "Jelica");
-                localStorage.setItem("cntJ", "0");
+                var s = Math.random() < 0.5 ? "male" : "female";
+                if (s == "male") {
+                    sessionStorage.setItem("user", "Adrian");
+                }
+                else {
+                    sessionStorage.setItem("user", "Jelica");
+                }
             }
         }   
 
@@ -52,7 +59,7 @@
     </script>
 
 </head>
-<body style="background-image: url('./images/bg1.jpg'); background-repeat: no-repeat;">
+<body style="background-image: url('./images/bg1.jpg'); background-repeat: no-repeat;" onload="initIndex()">
     
 <div class="wrapper">
     <div class="main">
