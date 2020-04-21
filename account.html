@@ -53,7 +53,7 @@
             rowID=100;
             removed=sessionStorage.getItem("removed");
             removedNum=sessionStorage.getItem("removedNum");
-            full="<table><thead><th>Trening</th><th>Datum</th><th>Vreme</th><th>Otkazivanje</th></thead>";
+            full="<table><thead><th>Trening</th><th>Datum</th><th>Vreme</th><th>Dan</th><th>Otkazivanje</th></thead>";
 
             danas=new Date();
             zero='';
@@ -77,7 +77,11 @@
                     
                     datum=item.slice(0,10);
                     vreme=item.slice(11,16);
-                    ime=item.substring(16);
+                    imeDana=item.slice(17,20);
+                    ime=item.substring(21);
+
+                    
+                    // alert(datum+' '+ vreme+ ' '+ imeDana+ ' '+ ime);
 
                     dan=datum.slice(0,2);
                     mesec=datum.slice(3,5);
@@ -93,7 +97,7 @@
                     currRow=new RegExp(rowID);
                     removed=sessionStorage.getItem("removed");
                     if (currRow.exec(removed)==null) {
-                        full+='<tr id="'+rowID+'"><td>'+ime+'</td><td>'+datum+'</td><td>'+vreme+'</td>';
+                        full+='<tr id="'+rowID+'"><td>'+ime+'</td><td>'+datum+'</td><td>'+vreme+'</td>'+'<td>'+imeDana+'</td>';
                         if (moze) {
                             full+='<td><input type="button" class="btn" value="Otkaži" onclick="cancelPlace('+rowID+')"></td></tr>';
                         }        

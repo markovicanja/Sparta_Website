@@ -37,6 +37,7 @@
                 sessionStorage.setItem("rowID", "100");
                 sessionStorage.setItem("removed", "");
                 sessionStorage.setItem("removedNum", "0");
+                sessionStorage.setItem("allReserved", "");
 
                 var s = Math.random() < 0.5 ? "male" : "female";
                 if (s == "male") {
@@ -45,6 +46,72 @@
                 else {
                     sessionStorage.setItem("user", "Jelica");
                 }
+
+                allSlots = {
+                    "Jutarnja joga": {
+                        "Pon":"3",
+                        "Sre":"4",
+                        "Pet":"5"
+                    },
+                    "Aštanga joga": {
+                        "Uto":"1",
+                        "Čet":"2",
+                        "Sub":"3"
+                    },
+                    "Hatha joga": {
+                        "Uto":"1",
+                        "Pet":"2",
+                        "Ned":"3"
+                    },
+                    "Klasični pilates": {
+                        "Pon":"1",
+                        "Sre":"2",
+                        "Pet":"3"
+                    },
+                    "Reformer pilates": {
+                        "Uto":"1",
+                        "Čet":"2"
+                    },
+                    "Stot pilates": {
+                        "Čet":"2",
+                        "Ned":"3"
+                    },
+                    "Crossfit": {
+                        "Pon":"1",
+                        "Sre":"2",
+                        "Sub":"3"
+                    },
+                    "Spartanac": {
+                        "Pon":"1",
+                        "Sre":"2",
+                        "Pet":"3"
+                    },
+                    "Body sculpting": {
+                        "Uto":"1",
+                        "Čet":"2"
+                    },
+                    "Core": {
+                        "Pon":"1",
+                        "Sre":"2",
+                        "Pet":"3"
+                    },
+                    "Kardio Boks": {
+                        "Uto":"1",
+                        "Čet":"2",
+                        "Sub":"3"
+                    },
+                    "Aerobni napad": {
+                        "Pon":"1",
+                        "Sre":"2",
+                        "Pet":"3"
+                    },
+                    "Zumba": {
+                        "Sre":"1",
+                        "Sub":"3"
+                    }
+                }
+
+                sessionStorage.setItem("allSlots", JSON.stringify(allSlots));
             }
         }   
 
