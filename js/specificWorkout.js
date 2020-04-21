@@ -25,3 +25,8 @@ $(document).ready(function() {
         $("#video").attr('src',$videoSrc); 
     }) 
 });
+
+/* Rating stars */
+function setRating(workout, rating) {
+    sessionStorage.setItem(workout, rating);
+}
