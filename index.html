@@ -39,12 +39,23 @@
                 sessionStorage.setItem("removedNum", "0");
                 sessionStorage.setItem("allReserved", "");
 
+                userExercises=new Array();
                 var s = Math.random() < 0.5 ? "male" : "female";
                 if (s == "male") {
                     sessionStorage.setItem("user", "Adrian");
+                    userExercises.push("spartan");
+                    userExercises.push("core");
+                    userExercises.push("cardioBox");
+                    userExercises.push("crossfit");
+                    sessionStorage.setItem("userExercises", JSON.stringify(userExercises));
                 }
                 else {
                     sessionStorage.setItem("user", "Jelica");
+                    userExercises.push("hathaYoga");
+                    userExercises.push("reformerPilates");
+                    userExercises.push("stottPilates");
+                    userExercises.push("aerobicAttack");
+                    sessionStorage.setItem("userExercises", JSON.stringify(userExercises));
                 }
 
                 allSlots = {
