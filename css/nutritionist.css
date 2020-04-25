@@ -1,0 +1,120 @@
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/nutritionist.jpg);
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Info section */
+.info-section {
+    background-color: white;
+    padding: 2em 0;
+    display: table;
+    vertical-align: middle;
+}
+.info-section .text {
+    margin-bottom: auto;
+    margin-top: auto;
+}
+.info-section img {
+    margin: 2em 0;
+}
+
+/* Gallery */
+.gallery {
+    text-align: center;
+    padding: 3em 0;
+}
+.gallery .heading-sm {
+    color: white;
+    text-shadow: 0.5em 0.5em 0.2em black;
+}
+.slider {
+    display: flex;
+    height: 200px;
+    overflow-x: scroll !important;
+    padding: 16px;
+    scroll-behavior: smooth;
+}
+.slider::-webkit-scrollbar {
+    height: 5px;
+    width: 150px;
+    display: none;
+}
+.slider::-webkit-scrollbar-track {
+    background: transparent;
+}
+.slider::-webkit-scrollbar-thumb {
+    background: #888;
+}
+.slider::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.slider img:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.15);
+}
+.slide img {
+    height: 100%;
+    width: 150px;
+    margin: 0 10px;
+    object-fit: cover;
+    transition: .25s ease-in-out;
+}
+.control-prev-btn, .control-next-btn {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    margin: 0 2em;
+}
+@media only screen and (max-width: 420px) {
+    .slider {
+        padding: 0;
+    }
+    .slide {
+        padding: 16px 10px;
+    }
+    .slide img {
+        margin: 0;
+    }
+}
+
+/* Contact */
+.contact-form {
+    background-color: white;
+    padding: 3em 0;
+}
+.contact-form textarea {
+    color: black;
+    background-color: transparent;
+    border: 1px solid rgb(132, 164, 201);
+    resize: none;
+    width: 100%;
+    height: 20vh;
+    margin: 20px 0px;
+    padding: 10px;
+}
+.contact-form textarea:focus {
+    outline: none;
+    border-color: rgb(80, 99, 121);
+}
+.contact-form input[type=text], .contact-form input[type=date] {
+    color: black;
+    border-width: 0 0 1px 0;
+    border-color: rgb(132, 164, 201);
+    background: transparent;
+    margin-bottom: .5em;
+    width: 100%;
+    padding: 15px;
+}
+.contact-form input[type=text]:focus {
+    border-color: rgb(80, 99, 121);
+    outline: none;
+}
+.contact-text {
+    margin: auto;
+    text-align: right;
+}
+.contact-text .phone {
+    color: rgb(132, 164, 201);
+    font-size: xx-large;
+}

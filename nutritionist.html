@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparta | Nutricionista</title>
+
+    <!--Font-->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    
+    <!-- FontAwesome CSS --> <!-- For icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    
+    <!-- JQuery --> <!-- For navbar -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--Bootstrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nutritionist.css">
+
+    <link rel="icon" href="./images/logo/logo-icon.png">
+
+    <script>
+
+        function prev() {
+            document.getElementById('slider-container').scrollLeft -= 150;
+        }
+
+        function next() {
+            document.getElementById('slider-container').scrollLeft += 150;
+        }
+
+    </script>
+
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="main">
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                    aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="./images/logo/white-logo.png" alt="Sparta" style="height:80px">
+                </a>
+            
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Početna</a>
+                        </li>
+
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link" href="#" id="navbarDropdown"
+                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Usluge
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="allExercises.html">Treninzi</a>
+                                <a class="dropdown-item" href="nutritionist.html">Nutricionista</a>
+                                <a class="dropdown-item" href="massage.html">Masaže</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="booking.html">Zakazivanje treninga</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="account.html">Moj nalog</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">O nama</a>
+                        </li>
+                    </ul>
+                    <div class="my-2 my-lg-0 languages">
+                        <img src="./images/serbia.png" alt="srpski">
+                        <img src="./images/uk.png" alt="english">
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Breadcrumb -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Usluge</a></li>
+                            <li class="breadcrumb-item active-breadcrumb"><a href="nutritionist.html">Nutricionista</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Background section -->
+            <div class="container-fluid mt-5">
+                <div class="row">
+                    <div class="col-sm-12 cropped">
+                        <div class="heading">
+                            Nutricionista
+                            <br/><br/>
+                            <span class="white-button">
+                                <button class="button"><a href="#">Zakaži pregled</a></button>                 
+                            </span>                             
+                        </div>   
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info section -->
+            <div class="container-fluid info-section pt-5 pb-5">
+                <div class="row">
+                    <div class="offset-sm-1 col-sm-5 text">
+                        <div class="heading-sm mt-3 mb-3">Nutricionista</div>
+                        Nutricionista je tu da vam pomogne da na zdrav i bezbedan 
+                        način dostignete željene ciljeve i transformišete svoje telo. 
+                        Internet je prepun mahom štetnih i neefikasnih dijeta koje 
+                        dovode do jo-jo efekta, i u najgorem slučaju, značajnog 
+                        pogoršanja vašeg zdravlja.
+                    </div>
+                    <div class="col-sm-5">
+                       <img class="img-fluid" src="./images/food1.jpg">
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="offset-sm-1 col-sm-5">
+                        <img class="img-fluid" src="./images/food2.jpg">
+                    </div>
+                    <div class="col-sm-5 text">
+                        <div class="heading-sm mt-3 mb-3">Kako nutricionista dolazi do informacija koje su mu potrebne da obezbedi najbolji mogući tretman?</div>
+                        Sesije traju od 30 do 45 minuta. U tom periodu nutricionista 
+                        skuplja podatke sa vage, zatim vam daje upitnik i sa vama 
+                        prolazi kroz vaše svakodnevne (npr. sedenje na poslu, ishrana 
+                        koju najčešće koriste i sl.). Nakon ove procene, nutricionista 
+                        pravi plan ishrane koji ćete moći da podignete kroz tri dana 
+                        na recepciji objekta koji odaberete.
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="offset-sm-1 col-sm-5 text">
+                        <div class="heading-sm mt-3 mb-3">Izrada personalizovanog plana ishrane</div>
+                        Svaka osoba koja se obrati nutricionisti za pomoć dobiće posebni 
+                        tretman, i plan ishrane koji odgovara njihovim fitnes ciljevima, 
+                        i fizičkom zdravlju. Osobe sa zdravstvenim problemima ko što je 
+                        dijabetes ili visok krvni pritisak moraju posebno da vode računa 
+                        o ishrani, i nutricionista za svaku osobu ponaosob osmišlja 
+                        adekvatni plan ishrane koji će, u kombinaciji sa treningom, 
+                        dovesti do željene transformacije tela i pre svega, zdravog i 
+                        srećnijeg života. 
+                        <br/>
+                        Uostalom, neadekvatna ishrana bogata trans masnim kiselinama i 
+                        šećerima može izazvati niz zdravstvenih problema.
+                    </div>
+                    <div class="col-sm-5">
+                        <img class="img-fluid" src="./images/food3.jpg">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Gallery -->
+            <div class="gallery">
+                <div class="heading-sm">Zdravo i ukusno</div>
+                <span onclick="prev()" class="control-prev-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span onclick="next()" class="control-next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+                <div id="slider-container" class="slider">            
+                    <div class="slide">
+                        <img src="images/food4.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="images/food5.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="images/food6.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="images/food7.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="images/food8.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="images/food9.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="images/food10.jpeg">
+                    </div>
+                    <div class="slide">
+                        <img src="images/food11.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="images/food12.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="images/food13.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="images/food14.jpg">
+                    </div>
+                </div>
+            </div>       
+            
+            <!-- Kontakt -->
+            <div class="container-fluid contact-form">
+                <div class="row">
+                    <div class="offset-sm-1 col-sm-5">
+                        <div class="heading-sm mb-3">Zakaži termin</div>
+
+                        <form>
+                            <input type="text" name="name" placeholder="Ime">
+                            <br/>
+                            <input type="text" name="surname" placeholder="Prezime">
+                            <br/>
+                            <input type="text" name="mail" placeholder="Mejl">
+                            <br/>
+                            <input type="text" name="phone" placeholder="Kontak telefon">
+                            <br/>
+                            <input type="date" name="date" placeholder="Datum">
+                            <br/>
+                            <textarea name="description" placeholder="Kratak opis problema"></textarea>
+                            <br/>
+                            <button class="button">Pošalji</button>
+                            <button class="button">Preuzmi zahtev u PDF formatu</button>
+                        </form>                        
+                        
+                    </div>
+
+                    <div class="offset-sm-1 col-sm-4 contact-text">
+                        <div class="heading-sm mb-3">Za brži odgovor pozovite nas na telefon</div>
+                        <br/>
+                        <div class="heading-sm mb-3 phone">
+                            <i class="fas fa-phone"></i>
+                            +381 11 123 45 67
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="containter-fluid">
+        <div class="row">
+            <div class="col-sm-12 copyright">
+                &copy;Copyright 2020, Anja Marković i Vukašin Drašković,
+                Odsek za softversko inženjerstvo Elektrotehničkog fakulteta
+                Univerziteta u Beogradu
+            </div>
+        </div>
+    </footer>    
+
+</body>
+</html>
