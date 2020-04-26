@@ -1,3 +1,10 @@
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/bg11.jpg);
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+/* Reservation */
 .list-group {
     display: -ms-flexbox;
     display: flex;
@@ -5,10 +12,6 @@
     flex-direction: column;
     width: 60%;
     margin:auto;
-    border: solid;
-    border-width: 4px;
-    border-color:#6c757d;
-    border-radius: 9px;
     margin-bottom: 50px;
 }
 .list-group-item {
@@ -20,20 +23,18 @@
     color: black;
 }
 .list-group-item.active {
-    background-color: rgb(60, 121, 190);
+    background-color: rgb(132, 164, 201);
+    border: 0px;
 }
 .list-group-item:focus {
-    background-color: rgb(60, 121, 190);
-}
-.list-group-item:active {
-    background-color: rgb(60, 121, 190);
+    background-color: rgb(132, 164, 201);
+    border: 0px;
 }
 .list-group-item:hover {
     cursor: pointer;
 }
 .tekst {
-    font-weight: bold;
-    color: #6c757d;
+    color: white;
     font-size: 30px;
     text-align: center;
     margin-bottom: 25px;
@@ -48,10 +49,35 @@
     background-color: white;
 }
 span.badge {
-    background-color: rgb(60, 121, 190);
+    background-color: rgb(132, 164, 201);
 }
 .dropdown-menu {
     font-size: medium;
+}
+.reservation {
+    text-align: center;
+    padding: 2em 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/fit6.jpg);
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+.reservation .heading-lg {
+    font-size: 40px;
+    margin-bottom: 2em;
+    color: white;
+}
+.reservation .heading-sm {
+    font-size: 15px;
+    color: rgb(132, 164, 201);
+    font-weight: 700;
+}
+@media screen and (max-width: 800px) { 
+	.reservation .heading-sm  {
+		font-size: 15px;
+    }
+    .reservation .heading-lg {
+        font-size: 35px;
+    }
 }
 
 /* Schedule */
@@ -67,8 +93,6 @@ html {
 }
 body {    
     font-size: 1.6rem;
-    color: #222222;
-    background-color: white;
 }
 a {
     color: #A2B9B2;
@@ -76,6 +100,7 @@ a {
 .cd-schedule {
     position: relative;
     margin: 2em 0;    
+    background-color: white;
 }
 .cd-schedule::before {
     /* never visible - this is used in js to check the current MQ */
