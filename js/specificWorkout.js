@@ -30,3 +30,11 @@ $(document).ready(function() {
 function setRating(workout, rating) {
     sessionStorage.setItem(workout, rating);
 }
+
+/* Check if user can rate this exercise */
+function canRate(workout) {
+    userExercises=JSON.parse(sessionStorage.getItem("userExercises"));
+    didExercise=false;
+    for (i=0; i<userExercises.length; i++) if (userExercises[i]==workout) didExercise=true;
+    if (didExercise==false) document.getElementById(workout+'Rating').style.pointerEvents="none";
+} 
