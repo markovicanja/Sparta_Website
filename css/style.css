@@ -239,6 +239,6 @@ footer {
     color: rgba(255, 255, 255, 0.5);
 }
 .white-button .button {
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.199);
-    color: rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
 }
