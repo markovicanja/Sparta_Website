@@ -39,6 +39,23 @@
                 sessionStorage.setItem("removedNum", "0");
                 sessionStorage.setItem("allReserved", "");
 
+                ratings={
+                    "morningYoga": "4.8",
+                    "ashtangaYoga": "4.9",
+                    "hathaYoga": "4.7",
+                    "classicPilates": "4.9",
+                    "stottPilates": "4.6",
+                    "reformerPilates": "4.5",
+                    "crossfit": "4.7",
+                    "aerobicAttack": "4.8",
+                    "spartan": "4.8",
+                    "bodySculpting": "4.9",
+                    "cardioBox": "4.7",
+                    "zumba": "4.9",
+                    "core": "4.8" 
+                }
+                sessionStorage.setItem("ratings", JSON.stringify(ratings));
+
                 userExercises=new Array();
                 var s = Math.random() < 0.5 ? "male" : "female";
                 if (s == "male") {
