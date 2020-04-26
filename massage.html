@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparta | Nutricionista</title>
+
+    <!--Font-->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    
+    <!-- FontAwesome CSS --> <!-- For icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    
+    <!-- JQuery --> <!-- For navbar -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--Bootstrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/massage.css">
+
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+
+    <link rel="icon" href="./images/logo/logo-icon.png">
+
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="main">
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                    aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="./images/logo/white-logo.png" alt="Sparta" style="height:80px">
+                </a>
+            
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Početna</a>
+                        </li>
+
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link" href="#" id="navbarDropdown"
+                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Usluge
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="allExercises.html">Treninzi</a>
+                                <a class="dropdown-item" href="nutritionist.html">Nutricionista</a>
+                                <a class="dropdown-item" href="massage.html">Masaže</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="booking.html">Zakazivanje treninga</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="account.html">Moj nalog</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">O nama</a>
+                        </li>
+                    </ul>
+                    <div class="my-2 my-lg-0 languages">
+                        <img src="./images/serbia.png" alt="srpski">
+                        <img src="./images/uk.png" alt="english">
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Breadcrumb -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Usluge</a></li>
+                            <li class="breadcrumb-item active-breadcrumb"><a href="massage.html">Masaže</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Background section -->
+            <div class="container-fluid mt-5">
+                <div class="row">
+                    <div class="col-sm-12 cropped">
+                        <div class="heading">
+                            Masaže
+                            <br/><br/>
+                            <span class="white-button">
+                                <button class="button"><a href="#appointment">Zakažite masažu</a></button>                 
+                            </span>                             
+                        </div>   
+                    </div>
+                </div>
+            </div>
+
+            
+            <!--  -->
+
+
+            <!-- Contact -->
+            <div class="container-fluid contact-form">
+                <div class="row">
+                    <div class="offset-sm-1 col-sm-5">
+                        <a name="appointment"></a>
+                        <div class="heading-sm mb-3">Zakažite masažu</div>                        
+                        <form>
+                            <input type="text" id="name" placeholder="Ime">
+                            <br/>
+                            <input type="text" id="surname" placeholder="Prezime">
+                            <br/>
+                            <input type="text" id="mail" placeholder="Mejl">
+                            <br/>
+                            <input type="text" id="phone" placeholder="Kontak telefon">
+                            <br/>
+                            <input type="date" id="date" placeholder="Datum">
+                            <br/>
+                            <textarea id="description" placeholder="Kratak opis problema"></textarea>
+                            <br/>
+                            <button class="button">Pošalji</button>
+                            <button class="button" onclick="downloadPDF()">Preuzmi zahtev u PDF formatu</button>
+                        </form>      
+                    </div>
+
+                    <div class="offset-sm-1 col-sm-4 contact-text">
+                        <div class="heading-sm mb-3">Za brži odgovor kontaktirajte nas preko telefona</div>
+                        <br/>
+                        <div class="heading-sm mb-3 phone">
+                            <i class="fas fa-phone"></i>
+                            +381 11 123 45 67
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="containter-fluid">
+        <div class="row">
+            <div class="col-sm-12 copyright">
+                &copy;Copyright 2020, Anja Marković i Vukašin Drašković,
+                Odsek za softversko inženjerstvo Elektrotehničkog fakulteta
+                Univerziteta u Beogradu
+            </div>
+        </div>
+    </footer>    
+
+</body>
+</html>
