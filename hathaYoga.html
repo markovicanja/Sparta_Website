@@ -37,7 +37,7 @@
     </style>
 
 </head>
-<body>
+<body onload="canRate('hathaYoga')">
     
     <div class="wrapper">
         <div class="main">
@@ -221,7 +221,7 @@
                         <div class="heading-sm mt-3 mb-3">Ocene</div>
                         <div id="">Prosečna ocena: <b>4.7/5</b></div>
                         Oceni trening:
-                        <div class="rating-group">
+                        <div class="rating-group" id="hathaYogaRating">
                             <input disabled checked class="rating__input rating__input--none" name="rating3" id="rating3-none" value="0" type="radio">
                             <label aria-label="1 star" class="rating__label" for="rating3-1"><i class="rating__icon rating__icon--star fas fa-star"></i></label>
                             <input class="rating__input" name="rating3" id="rating3-1" value="1" type="radio" onclick="setRating('hathaYoga', 1)">
