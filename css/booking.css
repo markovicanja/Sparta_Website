@@ -31,9 +31,6 @@
 .list-group-item:hover {
     cursor: pointer;
 }
-a:hover {
-    text-decoration: underline !important;
-}
 .tekst {
     font-weight: bold;
     color: #6c757d;
@@ -55,9 +52,6 @@ span.badge {
 }
 .dropdown-menu {
     font-size: medium;
-}
-nav a:hover {
-    text-decoration: none !important;
 }
 
 /* Schedule */
@@ -198,6 +192,10 @@ a {
     height: 100%;
     padding: .8em;
 }
+.cd-schedule .events .single-event a:hover {
+    text-decoration: none;
+}
+
 @media only screen and (min-width: 550px) {
     .cd-schedule .events .single-event {
         width: 40%;
@@ -294,26 +292,26 @@ a {
     background: rgb(132, 164, 201);
 }
 .cd-schedule .single-event[data-event="event-1"]:hover {
-    background: rgb(110, 134, 161); 
+    background: rgba(132, 164, 201, 0.5);
 }
 .cd-schedule .single-event[data-event="event-2"],
 .cd-schedule [data-event="event-2"] .header-bg {
-    background: rgb(82, 101, 124);
+    background: rgb(92, 138, 192); 
 }
 .cd-schedule .single-event[data-event="event-2"]:hover {
-    background: rgb(138, 158, 180);
+    background: rgba(92, 139, 192, 0.5);
 }
 .cd-schedule .single-event[data-event="event-3"],
 .cd-schedule [data-event="event-3"] .header-bg {
-    background: rgb(146, 108, 138);
+    background: rgb(63, 114, 172);
 }
 .cd-schedule .single-event[data-event="event-3"]:hover {
-    background: rgb(150, 134, 146);
+    background: rgba(63, 114, 172, 0.5);
 }
 .cd-schedule .single-event[data-event="event-4"],
 .cd-schedule [data-event="event-4"] .header-bg {
-    background: rgb(124, 109, 136);
+    background: rgb(180, 198, 218);
 }
 .cd-schedule .single-event[data-event="event-4"]:hover {
-    background: rgb(180, 158, 197);
+    background: rgba(180, 198, 218, 0.5);
 }
