@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparta | My account</title>
+
+    <!--Font-->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    
+    <!-- FontAwesome CSS --> <!-- For icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    
+    <!-- JQuery --> <!-- For navbar -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--Bootstrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/account.css">
+
+    <!-- Custom JS -->
+    <script src="./js/booking.min.js"></script>
+
+    <link rel="icon" href="./images/logo/logo-icon.png">
+
+    <script>
+        initialHTML='<table><thead></thead><tr><td colspan="4" align="center">Nemate zakazanih termina</td></tr></table>';
+        function init() {
+
+            user=sessionStorage.getItem("user");
+            count=0;
+            char='';
+
+            if (user=="Adrian") {
+                document.getElementById("avatar").src="./images/male.jpg";
+                document.getElementById("name").innerHTML="Adrian Milaković";
+                count=sessionStorage.getItem('cntA');
+                char='A';
+            }
+            else {
+                document.getElementById("avatar").src="./images/female.jpg";
+                document.getElementById("name").innerHTML="Jelica Cincović";
+                count=sessionStorage.getItem('cntJ');
+                char='J';
+            }
+            
+
+            full='';
+            rowID=100;
+            removed=sessionStorage.getItem("removed");
+            removedNum=sessionStorage.getItem("removedNum");
+            full="<table><thead><th>Workout</th><th>Date</th><th>Time</th><th>Day</th><th>Cancellation</th></thead>";
+
+            danas=new Date();
+            zero='';
+            if (danas.getMonth()<9) zero='0';
+            danasDatum=danas.toString().slice(8,10)+'.'+zero+(danas.getMonth()+1)+'.'+(danas.getYear()+1900);
+            danDanas=danasDatum.slice(0,2);
+            mesecDanas=danasDatum.slice(3,5);
+            godinaDanas=danasDatum.slice(6,10);
+            satDanas=danas.getHours();
+            minutDanas=danas.getMinutes();
+            // alert(danDanas+ ' ' + mesecDanas + ' ' + godinaDanas + ' ' + satDanas + ' ' + minutDanas);
+
+            if (count==removedNum) {
+                document.getElementById('res').innerHTML=initialHTML;
+                return;
+            }
+
+                for (i=0; i<count; i++) {
+                    index='num'+char+i;
+                    item=sessionStorage.getItem(index);
+                    
+                    datum=item.slice(0,10);
+                    vreme=item.slice(11,16);
+                    imeDana=item.slice(17,20);
+                    ime=item.substring(21);
+
+                    
+                    // alert(datum+' '+ vreme+ ' '+ imeDana+ ' '+ ime);
+
+                    dan=datum.slice(0,2);
+                    mesec=datum.slice(3,5);
+                    godina=datum.slice(6,10);
+                    sat=parseInt(vreme.slice(0,2));
+                    minut=parseInt(vreme.slice(3,5));
+                    // alert(dan+ ' ' + mesec + ' ' + godina + ' ' + sat + ' ' + minut);
+
+                    moze=true;
+                    if (danDanas==dan && mesecDanas==mesec && godinaDanas==godina && satDanas==sat && (minut-minutDanas<30)) moze=false;
+
+                    rowID++;
+                    currRow=new RegExp(rowID);
+                    removed=sessionStorage.getItem("removed");
+                    if (currRow.exec(removed)==null) {
+                        full+='<tr id="'+rowID+'"><td>'+ime+'</td><td>'+datum+'</td><td>'+vreme+'</td>'+'<td>'+imeDana+'</td>';
+                        if (moze) {
+                            full+='<td><input type="button" class="btn" value="Cancel" onclick="cancelPlace('+rowID+')"></td></tr>';
+                        }        
+                    }
+                }
+
+                full+="</table>";
+
+                document.getElementById('res').innerHTML=full;
+        }        
+    </script>
+
+</head>
+<body onload="init()">
+    
+<div class="wrapper">
+    <div class="main">
+            
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img src="./images/logo/white-logo.png" alt="Sparta" style="height:80px">
+            </a>
+        
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index_en.html">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Services
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="allExercises_en.html">Workouts</a>
+                            <a class="dropdown-item" href="nutritionist_en.html">Nutritionist</a>
+                            <a class="dropdown-item" href="massage_en.html">Massages</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="booking_en.html">Schedule a workout</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="account_en.html">My account</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="about_en.html">About us</a>
+                    </li>
+                </ul>
+                <div class="my-2 my-lg-0 languages">
+                    <a href="account.html">
+                        <img src="./images/serbia.png" alt="srpski">
+                    </a>
+                    <a href="account_en.html">
+                        <img src="./images/uk.png" alt="english">
+                    </a>                    
+                </div>
+            </div>
+        </nav>
+
+        <!-- Breadcrumb -->
+        <div class="row">
+            <div class="col-sm-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index_en.html">Home</a>
+                        </li>
+                        <li class="breadcrumb-item active-breadcrumb">
+                            <a href="account_en.html">My account</a>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Background section -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 cropped">
+                    <div class="heading">
+                        My account
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Information -->
+        <div class="container-fluid information">
+            <div class="row">
+                <div class="offset-sm-1 col-sm-3 info-icons">
+                    <i class="fas fa-address-card"></i>
+                    <a href="account_en.html">
+                        My information
+                    </a>
+                    <br/>
+                    <i class="fas fa-sign-out-alt"></i>
+                    <a href="index_en.html" onclick="logOut()">
+                        Log out
+                    </a>
+                </div>  
+                <div class="col-sm-7 info-text">
+                    <img id="avatar" class="avatar" src="./images/male.jpg">
+                    <div id="name" class="name">Adrian Milaković</div>
+                    <div class="reserved" id="res">
+                        <table>
+                            <thead>
+                                <th>Workout</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Cancellation</th>
+                            </thead>
+                            <tr>
+                                <td colspan="4" align="center">You have no scheduled workouts</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="containter-fluid">
+    <div class="row">
+        <div class="col-sm-12 copyright">
+            &copy;Copyright 2020, Anja Marković i Vukašin Drašković,
+            Department of Software Engineering, School of Electrical Engineering
+            University of Belgrade
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
