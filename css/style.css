@@ -68,11 +68,14 @@ html, body {
     margin: 0px 2px;
     opacity: 0.3;
     transition: .5s ease;
-  }
+}
 .languages img:hover {
     opacity: 1;
     width:25px;
- }
+}
+ .languages a:hover {
+    color: rgb(27, 27, 27);
+}
   
 /* Footer */
 footer {
