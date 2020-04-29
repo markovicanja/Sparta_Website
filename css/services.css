@@ -1,0 +1,49 @@
+body {
+    background-image: url(../images/bg-fixed.jpg);
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+}
+
+/* Choose Pages */
+.page-types .type .text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.664);
+    transition: all 1s ease;
+}
+.page-types .type:hover .text {
+    padding-top: 3%;
+}
+.page-types .type {
+    position: relative;
+    height: 500px;
+    margin-top: 20px;
+}
+.type1 {
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/crossfit3.jpg);
+    background-size: cover;
+}
+.type1:hover {
+    background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/crossfit3.jpg);
+    background-size: cover;
+}
+.type2 {
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/nutritionist1.jpg);
+    background-size: cover;
+}
+.type2:hover {
+    background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/nutritionist1.jpg);
+    background-size: cover;
+}
+.type3 {
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/massage1.jpg);
+    background-size: cover;
+}
+.type3:hover {
+    background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/massage1.jpg);
+    background-size: cover;
+}
