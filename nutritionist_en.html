@@ -22,6 +22,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nutritionist.css">
 
+    <!-- Custom JS -->
+    <script src="js/formCheck.js"></script>
+
     <!-- jsPDF -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
 
@@ -37,6 +40,8 @@
             document.getElementById('slider-container').scrollLeft += 150;
         }
         function downloadPDF() {
+            if (!formCheck(1)) return;
+
             var name = $("#name").val();            
             var surname = $("#surname").val();
             var mail = $("#mail").val();
@@ -259,9 +264,10 @@
                             <br/>
                             <textarea id="description" placeholder="Short description of the problem"></textarea>
                             <br/>
-                            <button class="button">Send</button>
-                            <button class="button" onclick="downloadPDF()">Download request in PDF format</button>
-                        </form>  
+                            <div id="formErrors" style="color: red"></div>
+                        </form>   
+                        <button class="button" onclick="formCheck(1)">Send</button>
+                        <button class="button" onclick="downloadPDF()">Download request in PDF format</button>   
                     </div>
 
                     <div class="offset-sm-1 col-sm-4 contact-text">

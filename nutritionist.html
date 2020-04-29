@@ -22,6 +22,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nutritionist.css">
 
+    <!-- Custom JS -->
+    <script src="js/formCheck.js"></script>
+
     <!-- jsPDF -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
 
@@ -37,6 +40,7 @@
             document.getElementById('slider-container').scrollLeft += 150;
         }
         function downloadPDF() {
+            if (!formCheck(0)) return;
             var name = $("#name").val();            
             var surname = $("#surname").val();
             var mail = $("#mail").val();
@@ -262,9 +266,10 @@
                             <br/>
                             <textarea id="description" placeholder="Kratak opis problema"></textarea>
                             <br/>
-                            <button class="button">Pošalji</button>
-                            <button class="button" onclick="downloadPDF()">Preuzmi zahtev u PDF formatu</button>
-                        </form>      
+                            <div id="formErrors" style="color: red"></div>
+                        </form>                              
+                        <button class="button" onclick="formCheck(0)">Pošalji</button>
+                        <button class="button" onclick="downloadPDF()">Preuzmi zahtev u PDF formatu</button>
                     </div>
 
                     <div class="offset-sm-1 col-sm-4 contact-text">
