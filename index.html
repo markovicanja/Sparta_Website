@@ -57,6 +57,8 @@
                 sessionStorage.setItem("ratings", JSON.stringify(ratings));
 
                 userExercises=new Array();
+                alreadyRated=new Array();
+                sessionStorage.setItem("alreadyRated", JSON.stringify(alreadyRated));
                 var s = Math.random() < 0.5 ? "male" : "female";
                 if (s == "male") {
                     sessionStorage.setItem("user", "Adrian");
@@ -74,6 +76,20 @@
                     userExercises.push("aerobicAttack");
                     sessionStorage.setItem("userExercises", JSON.stringify(userExercises));
                 }
+
+                sessionStorage.setItem("morningYogaAddedComments", JSON.stringify(Array()));
+                sessionStorage.setItem("ashtangaYogaAddedComments", JSON.stringify(Array()));
+                sessionStorage.setItem("hathaYogaAddedComments", JSON.stringify(Array()));
+                sessionStorage.setItem("classicPilatesAddedComments", JSON.stringify(Array()));
+                sessionStorage.setItem("reformerPilatesAddedComments", JSON.stringify(Array()));
+                sessionStorage.setItem("stottPilatesAddedComments", JSON.stringify(Array()));
+                sessionStorage.setItem("bodySculptingAddedComments", JSON.stringify(Array()));
+                sessionStorage.setItem("coreAddedComments", JSON.stringify(Array()));
+                sessionStorage.setItem("spartanAddedComments", JSON.stringify(Array()));
+                sessionStorage.setItem("crossfitAddedComments", JSON.stringify(Array()));
+                sessionStorage.setItem("aerobicAttackAddedComments", JSON.stringify(Array()));
+                sessionStorage.setItem("zumbaComments", JSON.stringify(Array()));
+                sessionStorage.setItem("cardioBoxAddedComments", JSON.stringify(Array()));
 
                 allSlots = {
                     "Jutarnja joga": {

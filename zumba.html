@@ -218,7 +218,7 @@
             <!-- Comment section -->
             <div class="container-fluid comment-section pt-5 pb-5">
                 <div class="row">
-                    <div class="offset-sm-1 col-sm-5">
+                    <div class="offset-sm-1 col-sm-5" id="canChange">
                         <div class="heading-sm mt-3 mb-3">Ocene</div>
                         <div id="">Prosečna ocena: <b id="currRating">4.4/5</b></div>
                         Oceni trening:
@@ -239,32 +239,15 @@
                 </div>
 
                 <div class="row">
-                    <div class="offset-sm-1 col-sm-5">
+                    <div class="offset-sm-1 col-sm-5" id="commentHolder">
                         <div class="heading-sm mt-3 mb-3">Komentari</div>
-
-                        <div class="comment">
-                            <img src="./images/male.jpg" class="avatar">
-                            <span class="name">Ivan Stupar</span>
-                            <span class="date">07.04.2020.</span>
-                            <div class="comment-content">
-                                Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit. Autem ratione nihil quaerat ad 
-                                similique minus, temporibus, neque numquam inventore
-                                perspiciatis reiciendis aperiam laborum modi sit 
-                                aspernatur, quas consectetur alias doloribus.
-                            </div>
-                        </div>
 
                         <div class="comment">
                             <img src="./images/female.jpg" class="avatar">
                             <span class="name">Nina Marković</span>
                             <span class="date">17.11.2019.</span>
                             <div class="comment-content">
-                                Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit. Autem ratione nihil quaerat ad 
-                                similique minus, temporibus, neque numquam inventore
-                                perspiciatis reiciendis aperiam laborum modi sit 
-                                aspernatur, quas consectetur alias doloribus.
+                                Moja sestra kaže da je super, moram probati!
                             </div>
                         </div>
 
@@ -272,8 +255,8 @@
                     <div class="offset-sm-1 col-sm-4">
                         <div class="heading-sm mt-3 mb-3">Ostavi komentar:</div>
                         <form>
-                            <textarea name="comment" placeholder="Komentar..."></textarea>
-                            <button class="button">Postavi</button>
+                            <textarea name="comment" placeholder="Komentar..." id="newComment"></textarea>
+                            <button class="button" onclick="postComment('zumba')">Postavi</button>
                         </form>
                     </div>
                 </div>
