@@ -27,89 +27,6 @@
 
     <link rel="icon" href="./images/logo/logo-icon.png">
 
-    <script>
-        initialHTML='<table><thead></thead><tr><td colspan="4" align="center">Nemate zakazanih termina</td></tr></table>';
-        function init() {
-
-            user=sessionStorage.getItem("user");
-            count=0;
-            char='';
-
-            if (user=="Adrian") {
-                document.getElementById("avatar").src="./images/male.jpg";
-                document.getElementById("name").innerHTML="Adrian Milaković";
-                count=sessionStorage.getItem('cntA');
-                char='A';
-            }
-            else {
-                document.getElementById("avatar").src="./images/female.jpg";
-                document.getElementById("name").innerHTML="Jelica Cincović";
-                count=sessionStorage.getItem('cntJ');
-                char='J';
-            }
-            
-
-            full='';
-            rowID=100;
-            removed=sessionStorage.getItem("removed");
-            removedNum=sessionStorage.getItem("removedNum");
-            full="<table><thead><th>Workout</th><th>Date</th><th>Time</th><th>Day</th><th>Cancellation</th></thead>";
-
-            danas=new Date();
-            zero='';
-            if (danas.getMonth()<9) zero='0';
-            danasDatum=danas.toString().slice(8,10)+'.'+zero+(danas.getMonth()+1)+'.'+(danas.getYear()+1900);
-            danDanas=danasDatum.slice(0,2);
-            mesecDanas=danasDatum.slice(3,5);
-            godinaDanas=danasDatum.slice(6,10);
-            satDanas=danas.getHours();
-            minutDanas=danas.getMinutes();
-            // alert(danDanas+ ' ' + mesecDanas + ' ' + godinaDanas + ' ' + satDanas + ' ' + minutDanas);
-
-            if (count==removedNum) {
-                document.getElementById('res').innerHTML=initialHTML;
-                return;
-            }
-
-                for (i=0; i<count; i++) {
-                    index='num'+char+i;
-                    item=sessionStorage.getItem(index);
-                    
-                    datum=item.slice(0,10);
-                    vreme=item.slice(11,16);
-                    imeDana=item.slice(17,20);
-                    ime=item.substring(21);
-
-                    
-                    // alert(datum+' '+ vreme+ ' '+ imeDana+ ' '+ ime);
-
-                    dan=datum.slice(0,2);
-                    mesec=datum.slice(3,5);
-                    godina=datum.slice(6,10);
-                    sat=parseInt(vreme.slice(0,2));
-                    minut=parseInt(vreme.slice(3,5));
-                    // alert(dan+ ' ' + mesec + ' ' + godina + ' ' + sat + ' ' + minut);
-
-                    moze=true;
-                    if (danDanas==dan && mesecDanas==mesec && godinaDanas==godina && satDanas==sat && (minut-minutDanas<30)) moze=false;
-
-                    rowID++;
-                    currRow=new RegExp(rowID);
-                    removed=sessionStorage.getItem("removed");
-                    if (currRow.exec(removed)==null) {
-                        full+='<tr id="'+rowID+'"><td>'+ime+'</td><td>'+datum+'</td><td>'+vreme+'</td>'+'<td>'+imeDana+'</td>';
-                        if (moze) {
-                            full+='<td><input type="button" class="btn" value="Cancel" onclick="cancelPlace('+rowID+')"></td></tr>';
-                        }        
-                    }
-                }
-
-                full+="</table>";
-
-                document.getElementById('res').innerHTML=full;
-        }        
-    </script>
-
 </head>
 <body onload="init()">
     
@@ -122,7 +39,7 @@
                 aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index_en.html">
                 <img src="./images/logo/white-logo.png" alt="Sparta" style="height:80px">
             </a>
         
@@ -148,19 +65,19 @@
                         <a class="nav-link" href="booking_en.html">Schedule a workout</a>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="account_en.html">My account</a>
                     </li>
 
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="about_en.html">About us</a>
                     </li>
                 </ul>
                 <div class="my-2 my-lg-0 languages">
-                    <a href="account.html">
+                    <a href="account.html" onclick="languageSerbian()">
                         <img src="./images/serbia.png" alt="srpski">
                     </a>
-                    <a href="account_en.html">
+                    <a href="account_en.html" onclick="languageEnglish()">
                         <img src="./images/uk.png" alt="english">
                     </a>                    
                 </div>
@@ -201,7 +118,7 @@
                     </a>
                     <br/>
                     <i class="fas fa-sign-out-alt"></i>
-                    <a href="index_en.html" onclick="logOut()">
+                    <a href="index.html" onclick="logOut()">
                         Log out
                     </a>
                 </div>  

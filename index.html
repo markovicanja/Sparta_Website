@@ -30,6 +30,9 @@
 
             cnt=sessionStorage.getItem("cnt");
             if (cnt==null) {
+
+                sessionStorage.setItem("language", "srb");
+
                 cnt=1;
                 sessionStorage.setItem("cnt", cnt);
                 sessionStorage.setItem("cntA", "0");
@@ -157,6 +160,23 @@
 
                 sessionStorage.setItem("allSlots", JSON.stringify(allSlots));
             }
+
+            ratings=JSON.parse(sessionStorage.getItem("ratings"));
+            $('#ocena1').text("Ocena: "+ratings['spartan']+"/5");
+            popuniZvezdice('zvezdice1', ratings['spartan']);
+            $('#ocena2').text("Ocena: "+ratings['cardioBox']+"/5");
+            popuniZvezdice('zvezdice2', ratings['cardioBox']);
+            $('#ocena3').text("Ocena: "+ratings['ashtangaYoga']+"/5");
+            popuniZvezdice('zvezdice3', ratings['ashtangaYoga']);
+        }
+
+        function popuniZvezdice(id, rating) {
+            content='';
+            for (i=0; i<5; i++) {
+                if (rating>=(i+1)) content+='<span class="fa fa-star checked"></span>';
+                else content+='<span class="fa fa-star"></span>';
+            }
+            $('#'+id).html(content);
         }   
 
         function prev() {
@@ -260,14 +280,14 @@
                         Idealan je kako za početnike tako i za vežbače koji 
                         žele usavršiti svoju tehniku.
                     </span>
-                    <div class="rate">
+                    <div class="rate" id="zvezdice1">
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                     </div>
-                    <span class="text">Ocena: 5/5</span>
+                    <span class="text" id="ocena1">Ocena: 5/5</span>
                 </div>
                 <div class="offset-sm-2 offset-md-0 col-sm-8 col-md-4 blue-box">
                     <i class="fas fa-heartbeat"></i>
@@ -280,14 +300,14 @@
                         periodu, skidanjem masnih naslaga sa svih neželjenih 
                         delova.
                     </span>
-                    <div class="rate">
+                    <div class="rate" id="zvezdice2">
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star"></span>
                     </div>
-                    <span class="text">Ocena: 4.9/5</span>
+                    <span class="text" id="ocena2">Ocena: 4.9/5</span>
                 </div>
                 <div class="offset-sm-2 offset-md-0 col-sm-8 col-md-4 lightblue-box">
                     <i class="fas fa-spa"></i>
@@ -301,14 +321,14 @@
                         Kada jednom osetite dobrobiti joge teško ćete se 
                         rešiti ove zdrave navike.
                     </span>
-                    <div class="rate">
+                    <div class="rate" id="zvezdice3">
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                     </div>
-                    <span class="text">Ocena: 4.9/5</span>
+                    <span class="text" id="ocena3">Ocena: 4.9/5</span>
                 </div>
             </div>
         </div>
