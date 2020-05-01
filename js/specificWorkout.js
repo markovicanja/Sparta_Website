@@ -91,6 +91,11 @@ function canRate(workout) {
 function postComment(workout) {
     if ($('#newComment').val()=='') return;
 
+    userExercises=JSON.parse(sessionStorage.getItem("userExercises"));
+    didExercise=false;
+    for (i=0; i<userExercises.length; i++) if (userExercises[i]==workout) didExercise=true;
+    if (didExercise==false) return;
+
     name=''; image='';
     if (sessionStorage.getItem("user")=="Adrian") {
         name="Adrian Milaković"; 
