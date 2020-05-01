@@ -50,6 +50,9 @@ function setRating(workout, rating) {
 ifRatedHTML='<div class="heading-sm mt-3 mb-3">Ocene</div><div id="">Prosečna ocena: <b id="currRating"></b></div></br>Već ste ocenili ovaj trening!'
 cantRateHTML='<div class="heading-sm mt-3 mb-3">Ocene</div><div id="">Prosečna ocena: <b id="currRating"></b></div></br>Niste radili ovaj trening!'
 
+ifRatedHTMLeng='<div class="heading-sm mt-3 mb-3">Ratings</div><div id="">Average rating: <b id="currRating"></b></div></br>You already rated this workout!'
+cantRateHTMLeng='<div class="heading-sm mt-3 mb-3">Ratings</div><div id="">Average rating: <b id="currRating"></b></div></br>You did not do this workout!'
+
 /* Check if user can rate this exercise */
 function canRate(workout) {
     ratings=JSON.parse(sessionStorage.getItem("ratings"));
@@ -61,14 +64,16 @@ function canRate(workout) {
     for (i=0; i<userExercises.length; i++) if (userExercises[i]==workout) didExercise=true;
     if (didExercise==false) {
         document.getElementById(workout+'Rating').style.pointerEvents="none";
-        document.getElementById('canChange').innerHTML=cantRateHTML;
+        if (sessionStorage.getItem("language")=="srb") document.getElementById('canChange').innerHTML=cantRateHTML;
+        else document.getElementById('canChange').innerHTML=cantRateHTMLeng;
         $('#currRating').text(workoutRating+'/5');
     }
     else {
         alreadyRated=JSON.parse(sessionStorage.getItem("alreadyRated"));
         for (i=0; i<alreadyRated.length; i++) if (workout==alreadyRated[i]) {
             document.getElementById(workout+'Rating').style.pointerEvents="none";
-            document.getElementById('canChange').innerHTML=ifRatedHTML;
+            if (sessionStorage.getItem("language")=="srb") document.getElementById('canChange').innerHTML=ifRatedHTML;
+            else document.getElementById('canChange').innerHTML=ifRatedHTMLeng;
             $('#currRating').text(workoutRating+'/5');
         }
     }
@@ -84,6 +89,8 @@ function canRate(workout) {
 }
 
 function postComment(workout) {
+    if ($('#newComment').val()=='') return;
+
     name=''; image='';
     if (sessionStorage.getItem("user")=="Adrian") {
         name="Adrian Milaković"; 
