@@ -40,13 +40,14 @@ html, body {
 /* Banners */
 .banners {
     height: 100px;
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/banner.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
 }
-.banner img {
+.banners img {
     width: 100%;
     height: 100px;
-}
-.banner {
-    padding: 0px;
 }
 
 /* Navbar */
