@@ -212,7 +212,7 @@
                     <button class="button"><a href="booking_en.html">Schedule a workout</a></button>                 
                 </div>
                 <div class="offset-lg-1 col-lg-3 offset-sm-3 col-sm-6">
-                    <img class="img-fluid" src="./images/gym1.jpg" alt="">
+                    <img  src="./images/gym1.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -415,16 +415,26 @@
             <div class="row">
 
                 <!-- Map -->
-                <div class="col-sm-8 map">
-                    <div class="mapouter">
-                        <div class="gmap_canvas">
-                            <iframe width="800" height="300" id="gmap_canvas" 
-                                src="https://maps.google.com/maps?q=belgrade&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-                            </iframe>
-                            <a href="https://www.embedgooglemap.net/text-tools/remove-duplicate-lines/"></a>
-                        </div>
-                    </div>
+                <div class="mapouter">
+                    <div class="gmap_canvas"><iframe width="800" height="300" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=bulevar%20kralja%20aleksandra%20100&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                            href="https://www.embedgooglemap.net"></a></div>
+                    <style>
+                        .mapouter {
+                            position: relative;
+                            text-align: right;
+                            height: 300px;
+                            width: 800px;
+                        }
+                
+                        .gmap_canvas {
+                            overflow: hidden;
+                            background: none !important;
+                            height: 300px;
+                            width: 800px;
+                        }
+                    </style>
                 </div>
 
                 <!-- Contact -->
