@@ -10,7 +10,7 @@ body {
     align-items: center;
 }
 .about img {
-    position: relative;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     max-width: 100%;
